@@ -1,6 +1,74 @@
+@keyframes percents {
+	from {transform: rotate(0);}
+	50% {transform: rotate(50deg);}
+	to {transform: rotate(112deg);}
+} 
+
 .chart{
+	display: flex;
+	position: relative;
 	width: 100px;
 	height: 100px;
-	border: 5px solid;
+	padding: 0;
+	margin: 10px;
 	border-radius: 50%;
+	box-shadow: inset 0 0 0 5px $orange;
+}
+
+.chart__left-part{
+	position: absolute;
+	width: 51px;
+	height: 102px;
+	top: -1px;
+	left: -1px;
+	padding: 0;
+	border-radius: 100% 0 0 100% / 50% 0 0 50%;
+	overflow: hidden;
+}
+
+.chart__right-part{
+	position: absolute;
+	width: 51px;
+	height: 102px;
+	top: -1px;
+	right: -1px;
+	padding: 0;
+	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	overflow: hidden;
+}
+
+.chart__left-inner{
+	position: absolute;
+	width: 44px;
+	height: 88px;
+	border: 7px solid white;
+	border-right: 0;
+	border-radius: 100% 0 0 100% / 50% 0 0 50%;
+	transform: rotate(0);
+	transform-origin: right;
+}
+
+.chart__right-inner{
+	position: absolute;
+	width: 44px;
+	height: 88px;
+	border: 7px solid white;
+	border-left: 0;
+	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	transform: rotate(0);
+	transform-origin: left;
+	animation: percents 2s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+}
+
+.chart__number{
+	display: block;
+	position: absolute;
+	top: 22px;
+	left: 29px;
+	font-family: "Lato Light";
+	font-size: 40px;
+	color: $grey;
 }
