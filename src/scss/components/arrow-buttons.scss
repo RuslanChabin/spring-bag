@@ -1,0 +1,64 @@
+.arrow-button{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 3px solid $green;
+	background-color: white;
+	
+	&--right:after{
+		content:"";
+		top: 13px;
+		left: 9px;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		border-bottom: 4px solid $green;
+		border-right: 4px solid $green;
+		transform: rotate(-45deg);
+		}
+		
+	&--left:before{
+		content:"";
+		top: 13px;
+		left: 17px;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		border-bottom: 4px solid $green;
+		border-left: 4px solid $green;
+		transform: rotate(45deg);
+		}
+	&--grey{
+		background-color: $grey;
+		border: 3px solid $grey;
+		}
+	
+	&--green{
+		background-color: $green;	
+		}
+		
+	&--left-white-arrow:before{
+		content:"";
+		top: 13px;
+		left: 17px;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		border-bottom: 4px solid white;
+		border-left: 4px solid white;
+		transform: rotate(45deg);
+		}
+		
+	&--right-white-arrow:after{
+		content:"";
+		top: 13px;
+		left: 9px;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		border-bottom: 4px solid white;
+		border-right: 4px solid white;
+		transform: rotate(-45deg);
+		}
+}
