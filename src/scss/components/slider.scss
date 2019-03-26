@@ -1,0 +1,44 @@
+.slider-form{
+	position: relative;
+}
+
+.slider{
+	appearance: none;
+	width: 260px;
+	height: 5px;
+	border-radius: 3px;
+	background-color: $grey;
+	outline: none;
+	
+	&::-webkit-slider-thumb{
+		appearance:none;
+		width: 21px;
+		height: 21px;
+		border-radius: 50%;
+		background-color: $orange;
+		position: relative;
+	}
+}
+
+.slider-output{
+	position: absolute;
+	top: -28px;
+	left: 90px;
+	width: 35px;
+	background-color: $orange;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 25px;
+	color: white;
+	font-size: 13px;
+	font-family: "Lato Black";
+	
+	&::after{
+		content: "";
+		position: absolute;
+		top: 24px;
+		left: 12px;
+		border: 5px solid transparent;	
+		border-top: 5px solid $orange;
+	}
+}
