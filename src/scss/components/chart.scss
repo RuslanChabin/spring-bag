@@ -1,6 +1,5 @@
 @keyframes percents {
 	from {transform: rotate(0);}
-	50% {transform: rotate(50deg);}
 	to {transform: rotate(112deg);}
 } 
 
@@ -71,4 +70,36 @@
 	font-family: "Lato Light";
 	font-size: 40px;
 	color: $grey;
+}
+
+.pai-chart{
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	position: relative;
+	background-image: linear-gradient(42deg, $green 50%, transparent 50%), linear-gradient(90deg, $grey 50%, transparent 50%), linear-gradient(130deg, $darkgrey 50%, transparent 50%), linear-gradient(310deg, $orange 50%, transparent 50%);
+}
+
+.pai-chart::before{
+	content: "";
+	width: 48px;
+	height: 96px;
+	position: absolute;
+	left: -1px;
+	background-image: linear-gradient($grey 50%, transparent 50%);
+	border-radius: 100% 0 0 100% / 50% 0 0 50%;
+	border-left: 1px solid white;
+	transform: rotate(-30deg);
+	transform-origin: right;
+}
+
+.pai-chart::after{
+	content: "";
+	width: 63px;
+	height: 63px;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: 16px;
+	left: 16px;
 }
