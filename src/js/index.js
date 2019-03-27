@@ -12,7 +12,7 @@ range.addEventListener('input', function () {   document.querySelector('.slider-
 
 //green range input
 
-var range = document.querySelector('.slider--green');
+var range1 = document.querySelector('.slider--green');
 
-range.addEventListener('input', function () {   document.querySelector('.slider-output--green').style.width = 2.5*range.value +'px'
+range1.addEventListener('input', function () {   document.querySelector('.slider-output--green').style.width = 2.5*range1.value +'px'
 },false);

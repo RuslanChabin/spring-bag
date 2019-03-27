@@ -1,0 +1,118 @@
+.message-form-list{
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.message-form-list__item{
+	position: relative;
+}
+
+.message-form__input{
+	width: 67%;
+	min-height: 24px;
+	border-radius: 3px;
+	background-color: $grey;
+	border: none;
+	margin-bottom: 11px;
+	padding: 3px;
+	padding-left: 12px;
+	
+	&::-webkit-input-placeholder{
+		color: $darkgrey;
+		font-size: 12px;
+	}
+}
+
+.message-form__textarea{
+	width: 92%;
+	min-height: 65px;
+	border-radius: 3px;
+	background-color: $grey;
+	color: $darkgrey;
+	font-size: 12px;
+	border: none;
+	margin-bottom: 8px;
+	padding: 11px;
+	
+	&::-webkit-input-placeholder{
+		color: $darkgrey;
+		font-size: 12px;
+	}
+}
+
+.message-form__hint{
+	display: none;
+	position: absolute;
+	width: 71px;
+	top: 0;
+	right: 1px;
+	min-height: 30px;
+	border-radius: 3px;
+	background-color: $orange;
+	
+	&::before{
+		content: "";
+		position: absolute;
+		top:10px;
+		left: -10px;
+		border: 5px solid transparent;
+		border-right: 5px solid $orange;
+	}
+	
+	&--green{
+		background-color: $green;
+		
+		&::before{
+		content: "";
+		position: absolute;
+		top:10px;
+		left: -10px;
+		border: 5px solid transparent;
+		border-right: 5px solid $green;
+		}
+	}
+}
+
+.message-form__input:required:invalid + .message-form__hint{
+	display: block;
+}
+
+.message-form__input:required:invalid + .message-form__hint:after{
+	content: "Error";
+	position: absolute;
+	top: auto;
+	left: 15px;
+	font-size: 10px;
+	font-family: "Lato Black";
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	line-height: 29px;
+}
+
+.message-form__input:required:valid + .message-form__hint{
+	display: block;
+	background-color: $green;
+}
+
+.message-form__input:required:valid + .message-form__hint::before{
+	border-right: 5px solid $green;
+}
+
+.message-form__input:required:valid + .message-form__hint::after{
+	content: "Thanks!";
+	position: absolute;
+	top: auto;
+	left: 15px;
+	font-size: 10px;
+	font-family: "Lato Black";
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	line-height: 29px;
+}
+
