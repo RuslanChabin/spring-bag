@@ -17,7 +17,7 @@ html(lang="ru")
 				span.chart__number 38
 			div.pai-chart
 			form.slider-form
-				input.slider(
+				input.slider.slider--orange(
 				type="range"
 				min="0"
 				max="100"
@@ -25,5 +25,20 @@ html(lang="ru")
 				step="10"
 				name="slider1")
 				label.slider-output(for="slider1")
+			form.slider-form
+				input.slider.slider--green(
+				type="range"
+				min="0"
+				max="100"
+				value="75"
+				step="25"
+				name="slider2")
+				label.slider-output--green(for="slider2")
+				ul.slider-list
+					li.slider-list__item 0
+					li.slider-list__item 25
+					li.slider-list__item 50
+					li.slider-list__item 75
+					li.slider-list__item 100
 		main
 			h1 nvouvoeh
