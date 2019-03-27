@@ -1,0 +1,43 @@
+.toggle-label{
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 25px;
+	background-color: $grey;
+	border-radius: 15px;
+	
+	&::before{
+		content: "";
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		display: block;
+		width: 20px;
+		height: 19px;
+		border-radius: 50%;
+		background-color: white;
+	}
+	
+	&::after{
+		content: "OFF";
+		position: absolute;
+		top: 4px;
+		right: 10px;
+		color: white;
+		font-family: "Lato Black";
+		font-size: 12px;
+	}
+}
+
+.toggle:checked ~ .toggle-label{
+	background-color: $green;
+}
+
+.toggle:checked ~ .toggle-label::before {
+	left: 37px;
+}
+
+.toggle:checked ~ .toggle-label::after {
+	content: "ON";
+	right: 29px;
+}
