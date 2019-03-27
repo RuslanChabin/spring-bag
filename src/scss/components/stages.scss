@@ -1,0 +1,28 @@
+.stages-list{
+	list-style: none;
+	display: flex;
+	padding: 0;
+	justify-content: space-between;
+	width: 41%;
+	background-image: linear-gradient(to right, $orange 50%, $grey 50%, transparent 100%);
+	background-position: 100% center;
+	background-repeat: no-repeat;
+	background-size: 100% 15%;
+}
+
+.stages-list__item{
+	width: 29px;
+	height: 29px;
+	border-radius: 50%;
+	background-color: $orange;
+	color: white;
+	text-align: center;
+	line-height: 27px;
+	font-size: 14px;
+	font-family: "Lato Black";
+	
+	&--grey{
+		background-color: $grey;
+		color: $darkgrey;
+	}
+}

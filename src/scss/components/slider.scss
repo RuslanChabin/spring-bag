@@ -65,13 +65,11 @@
 .slider-list{
 	list-style: none;
 	display: flex;
+	justify-content: space-between;
+	width: 265px;
 	margin-top: 6px;
 	padding: 0;
 	font-family: "Lato Black";
 	font-size: 11px;
 	color: $grey;
-}
-
-.slider-list__item:not(:last-child){
-	margin-right: 50px;
 }
