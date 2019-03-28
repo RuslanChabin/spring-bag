@@ -3,6 +3,7 @@ html(lang="ru")
 	head
 	meta(charset = 'utf-8')
 	meta(name ="viewport", content = "initial-scale=1.0, width=device-width")
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
 	title Veloclub
 	body
 		header
@@ -108,4 +109,37 @@ html(lang="ru")
 							li.dropdown-menu-list__item 
 								a.dropdown-menu__link(href="#") This is option 3
 							li.dropdown-menu-list__item 
-								a.dropdown-menu__link(href="#") This is option 4			
+								a.dropdown-menu__link(href="#") This is option 4
+			div.container
+				div.user-profile
+					div.user-profile__avatar
+						img.user-profile__img(src="images/user1.png")
+					div.user-profile__info
+						p.user-profile__name John Smith
+						p.user-profile__proffesion UX Designer
+						ul.user-profile-list
+							li.user-profile-list__item
+								a.user-profile__link.user-profile__link--grey(href="#")
+									i.fab.fa-facebook-f
+							li.user-profile-list__item
+								a.user-profile__link.user-profile__link--orange(href="#")
+									i.fab.fa-twitter
+							li.user-profile-list__item
+								a.user-profile__link.user-profile__link--grey(href="#")
+									i.fab.fa-dribbble
+				div.user-profile
+					div.user-profile__avatar
+						img.user-profile__img(src="images/user2.png")
+					div.user-profile__info.user-profile__info--green
+						p.user-profile__name.user-profile__name--white Sarah Brown
+						p.user-profile__proffesion.user-profile__proffesion--white Developer
+						ul.user-profile-list
+							li.user-profile-list__item
+								a.user-profile__link(href="#")
+									i.fab.fa-facebook-f
+							li.user-profile-list__item
+								a.user-profile__link(href="#")
+									i.fab.fa-twitter
+							li.user-profile-list__item
+								a.user-profile__link(href="#")
+									i.fab.fa-dribbble

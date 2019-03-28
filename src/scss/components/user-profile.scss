@@ -1,0 +1,91 @@
+.user-profile{
+	display: flex;
+	margin-bottom: 22px;
+}
+
+.user-profile__img{
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	border: 5px solid $grey;
+}
+
+.user-profile__info{
+	position: relative;
+	width: 163px;
+	height: 93px;
+	border-radius: 7px;
+	background-color: $grey;
+	margin-left: 10px;
+	text-align: center;
+	
+	&::before{
+		content: "";
+		position: absolute;
+		top: 42px;
+		left: -10px;
+		border: 5px solid transparent;
+		border-right: 5px solid $grey;
+	}
+	
+	&--green{
+		background-color: $green;
+		
+		&::before{
+			border-right: 5px solid $green;
+		}
+	}
+}
+
+.user-profile__name{
+	color: $orange;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 10px;
+	
+	&--white{
+		color: white;
+	}
+}
+
+.user-profile__proffesion{
+	font-size: 11px;
+	font-family: "Lato Black";
+	text-transform: uppercase;
+	margin: 0;
+	color: $darkgrey;
+	
+	&--white{
+		color: white;
+	}
+}
+
+.user-profile-list{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	margin-left: -17px;
+	margin-top: 11px;
+}
+
+.user-profile-list__item{
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+
+.user-profile__link{
+	display: block;
+	min-width: 40px;
+	color: white;
+	font-size: 22px;
+	
+	&--grey{
+		color: $darkgrey;
+	}
+	
+	&--orange{
+		color: $orange;
+	}
+}
+
