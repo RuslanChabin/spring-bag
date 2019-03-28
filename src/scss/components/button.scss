@@ -37,10 +37,21 @@
 		color: $green
 	}
 	
+	&--contgreen-border{
+		background-color: white;
+		border: 1px solid $green;
+		box-shadow: inset 0 -3px 0 $contgreen;
+		color: $green
+	}
+	
 	&--orange-border{
 		background-color: white;
 		border: 1px solid $orange;
 		box-shadow: inset 0 -3px 0 $orange;
 		color: $orange;
 	}	
+	
+	&--width{
+		width: auto;
+	}
 }
