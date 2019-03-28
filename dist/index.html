@@ -63,6 +63,32 @@
       <label class="toggle-label" for="toggle"></label>
       <input class="tic-box hidden" id="ticBox" type="checkbox">
       <label class="tic-box-label" for="ticBox"></label>
+      <form class="searching-form" action="" method="get">
+        <p class="searching-form__content">
+          <label class="hidden" for="search">Searching form</label>
+          <input class="searching-form__input" id="search" type="text" name="search" placeholder="Search">
+          <button class="button searching-form__button" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="14px">
+              <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M13.392,13.539 C12.844,14.088 11.955,14.088 11.406,13.539 L7.864,9.997 C5.920,11.126 3.396,10.877 1.731,9.213 C-0.252,7.229 -0.252,4.013 1.731,2.030 C3.715,0.046 6.931,0.046 8.914,2.030 C10.493,3.608 10.793,5.959 9.860,7.856 L13.474,11.471 C14.023,12.019 13.941,12.991 13.392,13.539 ZM7.631,3.312 C6.356,2.037 4.289,2.037 3.014,3.312 C1.739,4.588 1.739,6.655 3.014,7.930 C4.289,9.205 6.356,9.205 7.631,7.930 C8.907,6.655 8.907,4.588 7.631,3.312 Z"></path>
+            </svg>
+          </button>
+        </p>
+      </form>
+      <div class="menu-wrapper">
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <p class="dropdown-menu__option">Choose An Option</p>
+          </li>
+          <li class="menu-list__item button dropdown-menu__button">
+            <ul class="dropdown-menu-list">
+              <li class="dropdown-menu-list__item"><a class="dropdown-menu__link" href="#">This is option 1</a></li>
+              <li class="dropdown-menu-list__item"> <a class="dropdown-menu__link" href="#">This is option 2</a></li>
+              <li class="dropdown-menu-list__item"> <a class="dropdown-menu__link" href="#">This is option 3</a></li>
+              <li class="dropdown-menu-list__item"> <a class="dropdown-menu__link" href="#">This is option 4			</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </main>
   <script type="text/javascript" src="js/main.js"></script></body>
 </html>
