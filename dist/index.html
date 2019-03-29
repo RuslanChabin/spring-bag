@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=cd9ea95a-f6f5-4613-88e8-2e7e1ea7a580&amp;lang=ru_RU" type="text/javascript"></script>
   <title>Veloclub</title>
   <body>
     <header>
@@ -142,6 +143,23 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="map__info">
+          <ul class="map-list">
+            <li class="map-list__item">
+              <p class="map__text">Meet us!</p>
+            </li>
+            <li class="map-list__item">
+              <address class="map__address">1259 California st San Francisco, CA</address>
+            </li>
+            <li class="map-list__item map-list__item--right-position">
+              <button class="map-button location-button"></button>
+              <button class="map-button pin-button"></button>
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
   <script type="text/javascript" src="js/main.js"></script></body>
