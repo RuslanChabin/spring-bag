@@ -45,3 +45,59 @@ function init(){
  
     myMap.geoObjects.add(myPlacemark);
 }
+
+//calendar
+
+function Calendar(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+	DayNow = new Date(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+	dayCount = 33 - new Date(year, month-1, 33).getDate(),
+	WeekDay = new Date(year, month,DNfirst-1).getDate(),
+	monthPrev = dayCount - WeekDay,
+    month=["January","February","March","April","May","June","July","August","September","October","November","December"];
+	
+//for previous month	
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td class="calendar-table__date-cell calendar-table__date-cell--white">' + (monthPrev + i);
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td class="calendar-table__date-cell calendar-table__date-cell--white">' + (26 + i);
+}
+
+//for present month
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td class="calendar-table__date-cell">' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+
+//for next month
+for(var  i = 0; i < 7 - DNlast; i++) calendar += '<td class="calendar-table__date-cell calendar-table__date-cell--white">' + (1 + i);
+//for data sets
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('.calendar__date').innerHTML = DayNow.getDate();
+document.querySelector('.calendar__month-title').innerHTML = month[D.getMonth()];
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+//extraline
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  
+	document.querySelector('#'+id+' tbody').innerHTML += '<tr><td class="hidden">&nbsp;<td class="hidden">&nbsp;<td class="hidden">&nbsp;<td class="hidden">&nbsp;<td class="hidden">&nbsp;<td class="hidden">&nbsp;<td class="hidden">&nbsp;';
+}
+}
+Calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+// button back
+document.querySelector('.calendar-button--left').onclick = function() {
+  Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)-1);
+}
+// button next
+document.querySelector('.calendar-button--right').onclick = function() {
+  Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
+}

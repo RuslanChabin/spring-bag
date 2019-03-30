@@ -1,0 +1,149 @@
+.calendar-list{
+	width: 280px;
+	list-style: none;
+	padding: 0;
+	background-color: $orange;
+	color: white;
+	border-radius: 3px;
+}
+
+.calendar-list__item{
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.calendar__date{
+	font-size: 80px;
+	font-weight: 300;
+	font-family: "Lato Light";
+	line-height: 117px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.calendar__month-block{
+	min-height: 45px;
+	padding: 0;
+	margin: 0;
+	margin-top: -9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $darkorange;
+}
+
+.calendar__month-title{
+	font-size: 24px;
+	font-family: "Lato Light";
+	font-weight: 200;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.calendar-button{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: $darkorange;
+	margin-top: 5px;
+	border: 0;
+	
+	&--left{
+		margin-left: 10px;
+		margin-right: auto;
+		
+		&::before{
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: 5px;
+			width: 10px;
+			height: 10px;
+			border-left: 2px solid white;
+			border-bottom: 2px solid white;
+			transform: rotate(45deg);
+		}
+	}
+	
+	&--right{
+		margin-left: auto;
+		margin-right: 10px;
+		
+		&::after{
+			content: "";
+			position: absolute;
+			top: 2px;
+			right: 5px;
+			width: 10px;
+			height: 10px;
+			border-left: 2px solid white;
+			border-bottom: 2px solid white;
+			transform: rotate(-135deg);
+		}
+	}
+}
+
+.calendar-table{
+	width: 100%;
+	height: auto;
+	background-color: $grey;
+	border-spacing: 0;
+	border-collapse: collapse;
+	padding: 0;
+}
+
+.calendar-table__months-cell{
+	font-size: 9px;
+	font-family: "Lato Black";
+	text-transform: uppercase;
+	background-color: $orange;
+	margin: 0;
+	padding: 8px 6px;
+}
+
+.calendar-table__date-cell{
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $grey;
+	color: $darkgrey;
+	font-size: 20px;
+	border: 1px solid white;
+	
+	&--white{
+		color: white;
+	}
+}
+
+.calendar-table tbody tr:last-child{
+
+}
+
+.calendar__text{
+	margin: 0;
+	display: block;
+	max-width: 280px;
+	height: 45px;
+	border-radius: 0 0 3px 3px;
+	background-color: $grey;
+	color: $darkgrey;
+	font-size: 13px;
+	font-family: "Lato Black";
+	text-transform: uppercase;
+	padding-left: 22px;
+	line-height: 50px;
+}
+
+.today {
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $orange;
+	font-size: 20px;
+	border: 1px solid $orange;
+}
+
