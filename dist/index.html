@@ -5,6 +5,8 @@
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=cd9ea95a-f6f5-4613-88e8-2e7e1ea7a580&amp;lang=ru_RU" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <title>Veloclub</title>
   <body>
     <header>
@@ -254,26 +256,94 @@
           </li>
         </ul>
       </div>
-      <div class="message-window">
+      <div class="output-message">
         <h1 class="user-message-name">Sarah Brown</h1>
-        <ul class="message-window-list">
-          <li class="message-window-list__item">
+        <ul class="message-menu-list">
+          <li class="message-menu-list__item">
             <button class="button-message"></button>
           </li>
-          <li class="message-window-list__item"><img class="user-profile__img" src="images/user2.png"></li>
-          <li class="message-window-list__item">
+          <li class="message-menu-list__item"><img class="user-profile__img" src="images/user2.png"></li>
+          <li class="message-menu-list__item">
             <button class="camera-button"></button>
           </li>
         </ul>
-        <ul class="message-list">
-          <li class="message-list__item">
-            <p class="message-text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+        <ul class="output-message-list">
+          <li class="output-message-list__item">
+            <p class="output-message-text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
           </li>
         </ul>
-        <form class="message-form">
-          <textarea class="message-form__input" rows="3" type="text" name="message"></textarea>
+        <form class="output-message-form">
+          <textarea class="output-message-form__input" rows="3" type="text" name="message"></textarea>
           <button class="button button--large button--strech">Reply</button>
         </form>
+      </div>
+      <div class="player-wrapper">
+        <div class="player-panel">
+          <button id="play" onclick="player.playVideo()">&#9658;</button>
+          <button id="pause" onclick="player.pauseVideo()"><i class="fas fa-pause"></i></button>
+          <div id="line" onclick="progress (event);">
+            <div class="viewed"></div>
+            <div id="fader"></div>
+          </div>
+          <button id="full" onclick="playFullscreen ();"></button>
+        </div>
+        <div id="player"></div>
+        <script>
+          function onYouTubeIframeAPIReady() {
+          	player = new YT.Player('player', {
+          		  height: '335',
+          		  width: '595',
+          		  playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
+          		  videoId: 'xQ_IQS3VKjA',
+          		  events: {
+          			'onReady': onPlayerReady,
+          		  }
+          	});
+          }
+          function onPlayerReady(event) {
+          	var player = event.target;
+          	iframe = document.getElementById('player');
+          	setupListener(); 			  
+          	updateProgressBar();
+          
+          	time_update_interval = setInterval(function () {
+          		updateProgressBar();
+          	}, 1000);		  
+          }
+          function setupListener (){
+          document.getElementById('full').addEventListener('click', playFullscreen);
+          document.getElementById('play').addEventListener('click', playVid);
+          document.getElementById('pause').addEventListener('click', pauseVid);
+          }
+          function playVid (){
+          document.getElementById('play').style.display = 'none';
+          document.getElementById('pause').style.display = 'block';
+          }
+          function pauseVid (){
+          document.getElementById('pause').style.display = 'none';
+          document.getElementById('play').style.display = 'block';
+          }
+          function playFullscreen (){
+          	  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+          	  if (requestFullScreen) {
+          		requestFullScreen.bind(iframe)();
+          	  }
+          }
+          function updateProgressBar(){
+          	document.querySelector('.viewed').style.width = (player.getCurrentTime() / player.getDuration() * 100) +'%'
+          }
+          function progress (event) {
+          	var line_width = jQuery('#line').width();
+          	var pos = jQuery('#line').offset();
+          	var elem_left = pos.left;		
+          	var Xinner = event.pageX - elem_left;
+          	var newTime = player.getDuration() * (Xinner / line_width);
+          	player.seekTo(newTime);
+          	if(player.playVideo()){
+          	document.getElementById('play').style.display = 'none';
+          	document.getElementById('pause').style.display = 'block';}
+          }
+        </script>
       </div>
     </main>
   <script type="text/javascript" src="js/main.js"></script></body>

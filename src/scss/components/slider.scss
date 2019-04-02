@@ -3,7 +3,7 @@
 }
 
 .slider{
-	appearance: none;
+	-webkit-appearance: none;
 	width: 260px;
 	height: 5px;
 	border-radius: 3px;
@@ -11,21 +11,43 @@
 	outline: none;
 	
 	&--orange::-webkit-slider-thumb{
+		-webkit-appearance:none;
+		width: 21px;
+		height: 21px;
+		border-radius: 50%;
+		background-color: $orange;
+		position: relative;
+		cursor: pointer;
+	}
+	
+	&--orange::-moz-range-thumb{
 		appearance:none;
 		width: 21px;
 		height: 21px;
 		border-radius: 50%;
 		background-color: $orange;
 		position: relative;
+		cursor: pointer;
 	}
 	
 	&--green::-webkit-slider-thumb{
+		-webkit-appearance:none;
+		width: 21px;
+		height: 21px;
+		border-radius: 50%;
+		background-color: $green;
+		position: relative;
+		cursor: pointer;
+		}
+		
+	&--green::-moz-range-thumb{
 		appearance:none;
 		width: 21px;
 		height: 21px;
 		border-radius: 50%;
 		background-color: $green;
 		position: relative;
+		cursor: pointer;
 		}
 }
 
@@ -53,9 +75,9 @@
 	
 	&--green{
 		position: absolute;
-		top: 11px;
+		top: 10px;
 		left: 0;
-		height: 5px;
+		height: 6px;
 		width: 200px;
 		background-color: $green;
 		border-radius: 3px;

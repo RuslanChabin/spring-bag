@@ -1,4 +1,4 @@
-.message-window{
+.output-message{
 	width: 279px;
 	min-height: 410px;
 	padding: 5px;
@@ -16,7 +16,7 @@
 	width: 65%;
 }
 
-.message-window-list{
+.message-menu-list{
 	display: flex;
 	list-style: none;
 	padding: 0;
@@ -26,17 +26,17 @@
 	align-items: flex-end;
 }
 
-.message-window-list__item:first-child{
+.message-menu-list__item:first-child{
 	padding-left: 16px;
 	padding-bottom: 2px;
 }
 
-.message-window-list__item:last-child{
+.message-menu-list__item:last-child{
 	padding-right: 23px;
 	padding-bottom: 8px;
 }
 
-.message-list{
+.output-message-list{
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -44,7 +44,8 @@
 	margin-bottom: 10px;
 }
 
-.message-list__item{
+.output-message-list__item{
+	position: relative;
 	width: 233px;
 	margin: 0 auto;
 	min-height: 50px;
@@ -54,9 +55,18 @@
 	font-size: 12.5px;
 	padding: 5px;
 	padding-top: 16px;
+	
+	&::before{
+		position: absolute;
+		top: -13px;
+		left: 46%;
+		content: "";
+		border: 7px solid transparent;
+		border-bottom: 7px solid white;
+	}
 }
 
-.message-text{
+.output-message-text{
 	display: block;
 	width: auto;
 	height: auto;
@@ -65,14 +75,14 @@
 	word-spacing: 2.7px;
 }
 
-.message-form{
+.output-message-form{
 	width: 243px;
 	margin: 0 auto;
 	padding: 0;
 	padding-top: 4px;
 }
 
-.message-form__input{
+.output-message-form__input{
 	width: 206px;
 	height: auto;
 	border: 3px solid white;

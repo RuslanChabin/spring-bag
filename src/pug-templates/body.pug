@@ -5,6 +5,8 @@ html(lang="ru")
 	meta(name ="viewport", content = "initial-scale=1.0, width=device-width")
 	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
 	script(src="https://api-maps.yandex.ru/2.1/?apikey=cd9ea95a-f6f5-4613-88e8-2e7e1ea7a580&lang=ru_RU" type="text/javascript")
+	script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+	script(src="https://www.youtube.com/iframe_api")
 	title Veloclub
 	body
 		header
@@ -249,21 +251,87 @@ html(lang="ru")
 									td.calendar-table__date-cell
 					li.calendar-list__item
 						p.calendar__text Today
-			div.message-window
+			div.output-message
 				h1.user-message-name Sarah Brown
-				ul.message-window-list
-					li.message-window-list__item
+				ul.message-menu-list
+					li.message-menu-list__item
 						button.button-message
-					li.message-window-list__item
+					li.message-menu-list__item
 						img.user-profile__img(src="images/user2.png")
-					li.message-window-list__item
+					li.message-menu-list__item
 						button.camera-button
-				ul.message-list
-					li.message-list__item
-						p.message-text Hey! So are we cool to meet at the art gallery? Say 8pm
-				form.message-form
-					textarea.message-form__input(
+				ul.output-message-list
+					li.output-message-list__item
+						p.output-message-text Hey! So are we cool to meet at the art gallery? Say 8pm
+				form.output-message-form
+					textarea.output-message-form__input(
 					rows="3"
 					type="text"
 					name="message")
 					button.button.button--large.button--strech Reply
+			div.player-wrapper
+				div.player-panel
+						button#play(onclick="player.playVideo()") &#9658;
+						button#pause(onclick="player.pauseVideo()")
+							i.fas.fa-pause
+						div#line(onclick="progress (event);")
+							div.viewed
+							div#fader
+						button#full(onclick="playFullscreen ();")
+				div#player
+				script.	
+					function onYouTubeIframeAPIReady() {
+						player = new YT.Player('player', {
+							  height: '335',
+							  width: '595',
+							  playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
+							  videoId: 'xQ_IQS3VKjA',
+							  events: {
+								'onReady': onPlayerReady,
+							  }
+						});
+					}
+					function onPlayerReady(event) {
+						var player = event.target;
+						iframe = document.getElementById('player');
+						setupListener(); 			  
+						updateProgressBar();
+
+						time_update_interval = setInterval(function () {
+							updateProgressBar();
+						}, 1000);		  
+					}
+					function setupListener (){
+					document.getElementById('full').addEventListener('click', playFullscreen);
+					document.getElementById('play').addEventListener('click', playVid);
+					document.getElementById('pause').addEventListener('click', pauseVid);
+					}
+					function playVid (){
+					document.getElementById('play').style.display = 'none';
+					document.getElementById('pause').style.display = 'block';
+					}
+					function pauseVid (){
+					document.getElementById('pause').style.display = 'none';
+					document.getElementById('play').style.display = 'block';
+					}
+					function playFullscreen (){
+						  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+						  if (requestFullScreen) {
+							requestFullScreen.bind(iframe)();
+						  }
+					}
+					function updateProgressBar(){
+						document.querySelector('.viewed').style.width = (player.getCurrentTime() / player.getDuration() * 100) +'%'
+					}
+					function progress (event) {
+						var line_width = jQuery('#line').width();
+						var pos = jQuery('#line').offset();
+						var elem_left = pos.left;		
+						var Xinner = event.pageX - elem_left;
+						var newTime = player.getDuration() * (Xinner / line_width);
+						player.seekTo(newTime);
+						if(player.playVideo()){
+						document.getElementById('play').style.display = 'none';
+						document.getElementById('pause').style.display = 'block';}
+					}
+				

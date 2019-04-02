@@ -1,0 +1,66 @@
+.player-wrapper{
+	width: 595px;
+	height: 335px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+}
+.player-panel {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	bottom: 0;
+	width: 595px; 
+	height: 47px; 
+	padding: 0;
+	background-color: rgba(1,0,0,0.29);
+}
+
+#play {
+	position: relative;
+	width: 50px;
+	height: 100%;
+	background-color: black;
+	border: 0;
+	color: white;
+}
+
+#pause {
+	position: relative;
+	width: 50px;
+	height: 100%;
+	background-color: black;
+	border: 0;
+	color: white;
+	display: none;
+}
+
+#line{
+	position: relative;
+	width: 475px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: white;
+	margin-top: 23px;
+	margin-left: 1px;
+	margin-right: auto;
+}
+
+.viewed{
+	position: absolute;
+	left: 0;
+	height: 5px;
+	border-radius: 5px;
+	background-color: $orange;
+}
+
+#full{
+	width: 47px;
+	height: 100%;
+	background-color: $orange;
+	border: 0;
+	background-image: url(../images/expand-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
