@@ -1,0 +1,47 @@
+.header {
+	position: relative;
+	width: 100%;
+	
+	background-color: $orange;
+}
+
+.logo {
+	position: absolute;
+	top: 5px;
+	left: 15%;
+	display: block;
+	width: 80px;
+	height: 70px;
+	
+	background-image: url(../images/logo.svg);
+	background-size: cover;
+	
+	&::after {
+		content: "VELOCLUB";
+		position: absolute;
+		top: 25px;
+		left: 100px;
+		
+		color: white;
+		font-size: 16px;
+		font-family: "Lato Black";
+	}
+}
+
+.header-menu {
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	height: auto;
+	
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	
+	list-style: none;
+}
+
+.header-menu__item:not(:last-child) {
+	margin-right: 10px;
+}
