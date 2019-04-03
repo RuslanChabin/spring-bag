@@ -35,6 +35,10 @@ img {
 	margin: 0 auto;
 }
 
+.section:not(:last-child){
+	margin-bottom: 50px;
+}
+
 .hidden {
     position: absolute;
   

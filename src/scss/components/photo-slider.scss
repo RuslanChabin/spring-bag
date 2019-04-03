@@ -1,7 +1,7 @@
 .photo-slider{
 	position: relative;
 	width: 100%;
-	height: auto;
+	height: 89vh;
 }
 
 .slider-arrow--left{
@@ -57,7 +57,7 @@
 
 .photo-slider-list__item{
 	position: absolute;
-	height: 90vh;
+	height: 89vh;
 	overflow: hidden;
 	opacity: 0;
 	transition: opacity 1.4s ease;

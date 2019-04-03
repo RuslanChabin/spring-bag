@@ -34,7 +34,7 @@
   </ul>
 </header>
     <main class="container">
-<section class="photo-slider">
+<section class="section photo-slider">
   <input class="hidden slider-button__input-1" type="radio" id="slider_btn_1" name="slide" checked>
   <input class="hidden slider-button__input-2" type="radio" id="slider_btn_2" name="slide">
   <input class="hidden slider-button__input-3" type="radio" id="slider_btn_3" name="slide">
@@ -51,9 +51,217 @@
     <div class="photo-slider-list__item photo-slider-list__item-3"><img class="photo-slider__img" src="images/slider3.jpg"></div>
   </div>
 </section>
-      <section class="news-block"></section>
-      <section class="video-block"></section>
-      <section class="map-block"></section>
+<section class="section">
+  <div class="news-container">
+    <ul class="news-list">
+      <li class="news-list__item"><a class="news-link" href="#">
+          <div class="news__block"><img class="news__img" src="images/news.png">
+            <div class="news__content">
+              <h1 class="news__title">it's all going downhill</h1>
+              <p class="news__date">
+                <time pubdate="2018-08-22">22 august 2018</time>
+              </p>
+              <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lorem urna, porta sit amet felis et, ullamcorper tristique leo.</p>
+            </div>
+          </div></a></li>
+      <li class="news-list__item">
+        <div class="news__block"><img class="news__img" src="images/events.png">
+          <div class="news__content news__content--green"><a class="news-link" href="#">
+              <p class="event__date"> 
+                <time pubdate="2018-08-24">24 <span class="event__month">Aug</span></time>
+              </p>
+              <h1 class="event__title">this is the title</h1>
+              <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+            <button class="button button--contgreen-border button--width event__button">add to calendar</button>
+          </div>
+        </div>
+      </li>
+      <li class="news-list__item"><a class="news-link" href="#">
+          <div class="news__block"><img class="news__img" src="images/news.png">
+            <div class="news__content">
+              <h1 class="news__title">it's all going downhill</h1>
+              <p class="news__date">
+                <time pubdate="2018-08-22">22 august 2018</time>
+              </p>
+              <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lorem urna, porta sit amet felis et, ullamcorper tristique leo.</p>
+            </div>
+          </div></a></li>
+      <li class="news-list__item">
+        <div class="news__block"><img class="news__img" src="images/events.png">
+          <div class="news__content news__content--green"><a class="news-link" href="#">
+              <p class="event__date"> 
+                <time pubdate="2018-08-24">24 <span class="event__month">Aug</span></time>
+              </p>
+              <h1 class="event__title">this is the title</h1>
+              <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+            <button class="button button--contgreen-border button--width event__button">add to calendar</button>
+          </div>
+        </div>
+      </li>
+      <li class="news-list__item"><a class="news-link" href="#">
+          <div class="news__block"><img class="news__img" src="images/news.png">
+            <div class="news__content">
+              <h1 class="news__title">it's all going downhill</h1>
+              <p class="news__date">
+                <time pubdate="2018-08-22">22 august 2018</time>
+              </p>
+              <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lorem urna, porta sit amet felis et, ullamcorper tristique leo.</p>
+            </div>
+          </div></a></li>
+      <li class="news-list__item">
+        <div class="news__block"><img class="news__img" src="images/events.png">
+          <div class="news__content news__content--green"><a class="news-link" href="#">
+              <p class="event__date"> 
+                <time pubdate="2018-08-24">24 <span class="event__month">Aug</span></time>
+              </p>
+              <h1 class="event__title">this is the title</h1>
+              <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+            <button class="button button--contgreen-border button--width event__button">add to calendar</button>
+          </div>
+        </div>
+      </li>
+      <li class="news-list__item"><a class="news-link" href="#">
+          <div class="news__block"><img class="news__img" src="images/news.png">
+            <div class="news__content">
+              <h1 class="news__title">it's all going downhill</h1>
+              <p class="news__date">
+                <time pubdate="2018-08-22">22 august 2018</time>
+              </p>
+              <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lorem urna, porta sit amet felis et, ullamcorper tristique leo.</p>
+            </div>
+          </div></a></li>
+      <li class="news-list__item">
+        <div class="news__block"><img class="news__img" src="images/events.png">
+          <div class="news__content news__content--green"><a class="news-link" href="#">
+              <p class="event__date"> 
+                <time pubdate="2018-08-24">24 <span class="event__month">Aug</span></time>
+              </p>
+              <h1 class="event__title">this is the title</h1>
+              <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+            <button class="button button--contgreen-border button--width event__button">add to calendar</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="section">
+  <div class="player-wrapper">
+    <div class="player-panel">
+      <button id="play" onclick="player.playVideo()">&#9658;</button>
+      <button id="pause" onclick="player.pauseVideo()"><i class="fas fa-pause"></i></button>
+      <div id="line" onclick="progress (event);">
+        <div class="viewed"></div>
+        <div id="fader"></div>
+      </div>
+      <button id="full" onclick="playFullscreen ();"></button>
+    </div>
+    <div id="player"></div>
+    <script>
+      function onYouTubeIframeAPIReady() {
+      	player = new YT.Player('player', {
+      		  height: '335',
+      		  width: '595',
+      		  playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
+      		  videoId: 'xQ_IQS3VKjA',
+      		  events: {
+      			'onReady': onPlayerReady,
+      		  }
+      	});
+      }
+      function onPlayerReady(event) {
+      	var player = event.target;
+      	iframe = document.getElementById('player');
+      	setupListener(); 			  
+      	updateProgressBar();
+      
+      	time_update_interval = setInterval(function () {
+      		updateProgressBar();
+      	}, 1000);		  
+      }
+      function setupListener (){
+      document.getElementById('full').addEventListener('click', playFullscreen);
+      document.getElementById('play').addEventListener('click', playVid);
+      document.getElementById('pause').addEventListener('click', pauseVid);
+      }
+      function playVid (){
+      document.getElementById('play').style.display = 'none';
+      document.getElementById('pause').style.display = 'block';
+      }
+      function pauseVid (){
+      document.getElementById('pause').style.display = 'none';
+      document.getElementById('play').style.display = 'block';
+      }
+      function playFullscreen (){
+      	  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+      	  if (requestFullScreen) {
+      		requestFullScreen.bind(iframe)();
+      	  }
+      }
+      function updateProgressBar(){
+      	document.querySelector('.viewed').style.width = (player.getCurrentTime() / player.getDuration() * 100) +'%'
+      }
+      function progress (event) {
+      	var line_width = jQuery('#line').width();
+      	var pos = jQuery('#line').offset();
+      	var elem_left = pos.left;		
+      	var Xinner = event.pageX - elem_left;
+      	var newTime = player.getDuration() * (Xinner / line_width);
+      	player.seekTo(newTime);
+      	if(player.playVideo()){
+      	document.getElementById('play').style.display = 'none';
+      	document.getElementById('pause').style.display = 'block';}
+      }
+    </script>
+  </div>
+</section>
+<section class="section">
+  <div class="map-container">
+    <div id="map"></div>
+    <div class="map__info">
+      <ul class="map-list">
+        <li class="map-list__item">
+          <p class="map__text">Meet us!</p>
+        </li>
+        <li class="map-list__item">
+          <address class="map__address">1259 California st San Francisco, CA</address>
+        </li>
+        <li class="map-list__item map-list__item--right-position">
+          <button class="map-button location-button"></button>
+          <button class="map-button pin-button"></button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      ymaps.ready(init);
+      
+      function init(){     
+      
+      	var myMap;
+      
+      	myMap = new ymaps.Map("map", {
+      		center: [37.787509, -122.444838],
+      		zoom: 13,
+      		controls: []
+      	});
+      
+      	myMap.behaviors.disable('scrollZoom');
+      
+      	myMap.controls.add("zoomControl", {
+      		position: {top: 15, left: 15}
+      	});
+      
+      	 var myPlacemark = new ymaps.Placemark([37.787509, -122.444838] , {},
+      		{ iconLayout: 'default#image',
+      		  iconImageHref: './images/marker.png',
+      		  iconImageSize: [59, 60],
+      		  iconImageOffset: [-15, -50] });     
+      
+      	myMap.geoObjects.add(myPlacemark);
+      }
+    </script>
+  </div>
+</section>
     </main>
 <footer class="footer">
   <ul class="footer-list">

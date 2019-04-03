@@ -1,0 +1,66 @@
+section.section
+	div.player-wrapper
+		div.player-panel
+				button#play(onclick="player.playVideo()") &#9658;
+				button#pause(onclick="player.pauseVideo()")
+					i.fas.fa-pause
+				div#line(onclick="progress (event);")
+					div.viewed
+					div#fader
+				button#full(onclick="playFullscreen ();")
+		div#player
+		script.	
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					  height: '335',
+					  width: '595',
+					  playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
+					  videoId: 'xQ_IQS3VKjA',
+					  events: {
+						'onReady': onPlayerReady,
+					  }
+				});
+			}
+			function onPlayerReady(event) {
+				var player = event.target;
+				iframe = document.getElementById('player');
+				setupListener(); 			  
+				updateProgressBar();
+
+				time_update_interval = setInterval(function () {
+					updateProgressBar();
+				}, 1000);		  
+			}
+			function setupListener (){
+			document.getElementById('full').addEventListener('click', playFullscreen);
+			document.getElementById('play').addEventListener('click', playVid);
+			document.getElementById('pause').addEventListener('click', pauseVid);
+			}
+			function playVid (){
+			document.getElementById('play').style.display = 'none';
+			document.getElementById('pause').style.display = 'block';
+			}
+			function pauseVid (){
+			document.getElementById('pause').style.display = 'none';
+			document.getElementById('play').style.display = 'block';
+			}
+			function playFullscreen (){
+				  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+				  if (requestFullScreen) {
+					requestFullScreen.bind(iframe)();
+				  }
+			}
+			function updateProgressBar(){
+				document.querySelector('.viewed').style.width = (player.getCurrentTime() / player.getDuration() * 100) +'%'
+			}
+			function progress (event) {
+				var line_width = jQuery('#line').width();
+				var pos = jQuery('#line').offset();
+				var elem_left = pos.left;		
+				var Xinner = event.pageX - elem_left;
+				var newTime = player.getDuration() * (Xinner / line_width);
+				player.seekTo(newTime);
+				if(player.playVideo()){
+				document.getElementById('play').style.display = 'none';
+				document.getElementById('pause').style.display = 'block';}
+			}

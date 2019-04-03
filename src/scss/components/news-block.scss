@@ -6,6 +6,8 @@
 .news-list{
 	display: flex;
 	list-style: none;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .news-list__item{

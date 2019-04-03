@@ -1,16 +1,24 @@
 .player-wrapper{
-	width: 595px;
-	height: 335px;
+	width: 70%;
+	height: 56vh;
 	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
+	margin: 10px auto;
 }
+
+.player-wrapper iframe{
+	width: 100%;
+	height: 100%;
+}
+
+
 .player-panel {
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
 	bottom: 0;
-	width: 595px; 
+	width: 100%; 
 	height: 47px; 
 	padding: 0;
 	background-color: rgba(1,0,0,0.29);
@@ -37,7 +45,7 @@
 
 #line{
 	position: relative;
-	width: 475px;
+	width: 89%;
 	height: 5px;
 	border-radius: 5px;
 	background-color: white;
