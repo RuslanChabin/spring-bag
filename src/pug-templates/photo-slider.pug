@@ -1,0 +1,17 @@
+section.photo-slider
+	input.hidden.slider-button__input-1(type="radio" id="slider_btn_1" name="slide" checked)
+	input.hidden.slider-button__input-2(type="radio" id="slider_btn_2" name="slide")
+	input.hidden.slider-button__input-3(type="radio" id="slider_btn_3" name="slide")
+	div.small-buttons-container
+		label.slider-button.slider-button-1(for="slider_btn_1")
+		label.slider-button.slider-button-2(for="slider_btn_2")
+		label.slider-button.slider-button-3(for="slider_btn_3")
+	button.arrow-button.arrow-button--left.slider-arrow--left
+	button.arrow-button.arrow-button--right.slider-arrow--right
+	div.photo-slider-list
+		div.photo-slider-list__item.photo-slider-list__item-1
+			img.photo-slider__img(src='images/slider1.jpg')
+		div.photo-slider-list__item.photo-slider-list__item-2
+			img.photo-slider__img(src='images/slider2.jpg')
+		div.photo-slider-list__item.photo-slider-list__item-3
+			img.photo-slider__img(src='images/slider3.jpg')

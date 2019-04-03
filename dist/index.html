@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head><link href="./css/style.css" rel="stylesheet"></head>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -8,6 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
   <title>Veloclub</title>
+<link href="./css/style.css" rel="stylesheet"></head>
   <body>
 <header class="header"><a class="header-logo" href="index.html"></a>
   <ul class="header-menu">
@@ -32,7 +33,28 @@
     </li>
   </ul>
 </header>
-    <main></main>
+    <main class="container">
+<section class="photo-slider">
+  <input class="hidden slider-button__input-1" type="radio" id="slider_btn_1" name="slide" checked>
+  <input class="hidden slider-button__input-2" type="radio" id="slider_btn_2" name="slide">
+  <input class="hidden slider-button__input-3" type="radio" id="slider_btn_3" name="slide">
+  <div class="small-buttons-container">
+    <label class="slider-button slider-button-1" for="slider_btn_1"></label>
+    <label class="slider-button slider-button-2" for="slider_btn_2"></label>
+    <label class="slider-button slider-button-3" for="slider_btn_3"></label>
+  </div>
+  <button class="arrow-button arrow-button--left slider-arrow--left"></button>
+  <button class="arrow-button arrow-button--right slider-arrow--right"></button>
+  <div class="photo-slider-list">
+    <div class="photo-slider-list__item photo-slider-list__item-1"><img class="photo-slider__img" src="images/slider1.jpg"></div>
+    <div class="photo-slider-list__item photo-slider-list__item-2"><img class="photo-slider__img" src="images/slider2.jpg"></div>
+    <div class="photo-slider-list__item photo-slider-list__item-3"><img class="photo-slider__img" src="images/slider3.jpg"></div>
+  </div>
+</section>
+      <section class="news-block"></section>
+      <section class="video-block"></section>
+      <section class="map-block"></section>
+    </main>
 <footer class="footer">
   <ul class="footer-list">
     <li class="footer-list__item">

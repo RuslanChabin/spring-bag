@@ -29,8 +29,10 @@ img {
 }
 
 .container {
-	width: auto;
-	height: 100%;
+	width: 90%;
+	min-height: 1000px;
+	box-shadow: 0 0 20px grey; 
+	margin: 0 auto;
 }
 
 .hidden {

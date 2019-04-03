@@ -1,0 +1,64 @@
+.photo-slider{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.slider-arrow--left{
+	position: absolute;
+	top: 45vh;
+	left: -2vw;
+	z-index: 1000;
+}
+
+.small-buttons-container{
+	display: flex;
+	position: absolute;
+	z-index: 1000;
+	top: 80vh;
+	left: 50%;
+}
+
+.slider-button{
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	border-radius: 50%;
+	border: 3px solid white;
+	box-shadow: inset 0 0 0 5px $orange;
+	margin-right: 10px;
+}
+
+.slider-button__input-1:checked ~ .small-buttons-container .slider-button-1,
+.slider-button__input-2:checked ~ .small-buttons-container .slider-button-2,
+.slider-button__input-3:checked ~ .small-buttons-container .slider-button-3{
+	box-shadow: inset 0 0 0 5px $green;
+}
+
+.slider-button__input-1:checked ~ .photo-slider-list .photo-slider-list__item-1,
+.slider-button__input-2:checked ~ .photo-slider-list .photo-slider-list__item-2,
+.slider-button__input-3:checked ~ .photo-slider-list .photo-slider-list__item-3{
+	opacity: 1;
+}
+
+.slider-arrow--right{
+	position: absolute;
+	top: 45vh;
+	right: -2vw;
+	z-index: 1000;
+}
+
+.photo-slider-list{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.photo-slider-list__item{
+	position: absolute;
+	height: 90vh;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 1.4s ease;
+}
