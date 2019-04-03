@@ -1,3 +1,13 @@
+.calendar-section{
+	position: relative;
+	margin-right: 20px;
+}
+
+.calendar-wrapper{
+	position: sticky;
+	top: 10px;
+}
+
 .calendar-list{
 	width: 280px;
 	list-style: none;

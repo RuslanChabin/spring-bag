@@ -33,24 +33,7 @@
     </li>
   </ul>
 </header>
-    <main class="container">
-<section class="section photo-slider">
-  <input class="hidden slider-button__input-1" type="radio" id="slider_btn_1" name="slide" checked>
-  <input class="hidden slider-button__input-2" type="radio" id="slider_btn_2" name="slide">
-  <input class="hidden slider-button__input-3" type="radio" id="slider_btn_3" name="slide">
-  <div class="small-buttons-container">
-    <label class="slider-button slider-button-1" for="slider_btn_1"></label>
-    <label class="slider-button slider-button-2" for="slider_btn_2"></label>
-    <label class="slider-button slider-button-3" for="slider_btn_3"></label>
-  </div>
-  <button class="arrow-button arrow-button--left slider-arrow--left"></button>
-  <button class="arrow-button arrow-button--right slider-arrow--right"></button>
-  <div class="photo-slider-list">
-    <div class="photo-slider-list__item photo-slider-list__item-1"><img class="photo-slider__img" src="images/slider1.jpg"></div>
-    <div class="photo-slider-list__item photo-slider-list__item-2"><img class="photo-slider__img" src="images/slider2.jpg"></div>
-    <div class="photo-slider-list__item photo-slider-list__item-3"><img class="photo-slider__img" src="images/slider3.jpg"></div>
-  </div>
-</section>
+    <main class="container container--flex">
 <section class="section">
   <h1 class="section-title">News & Events</h1>
   <div class="news-container">
@@ -124,95 +107,100 @@
     </ul>
   </div><a class="button button--orange button--center-position" href="news.html">Get more...					</a>
 </section>
-<section class="section">
-  <h1 class="section-title">Feel free</h1>
-  <div class="player-wrapper">
-    <div class="player-panel">
-      <button id="play" onclick="player.playVideo()">&#9658;</button>
-      <button id="pause" onclick="player.pauseVideo()"><i class="fas fa-pause"></i></button>
-      <div id="line" onclick="progress (event);">
-        <div class="viewed"></div>
-        <div id="fader"></div>
-      </div>
-      <button id="full" onclick="playFullscreen ();"></button>
-    </div>
-    <div id="player"></div>
-    <script>
-      function onYouTubeIframeAPIReady() {
-      	player = new YT.Player('player', {
-      		  height: '335',
-      		  width: '595',
-      		  playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
-      		  videoId: 'xQ_IQS3VKjA',
-      		  events: {
-      			'onReady': onPlayerReady,
-      		  }
-      	});
-      }
-      function onPlayerReady(event) {
-      	var player = event.target;
-      	iframe = document.getElementById('player');
-      	setupListener(); 			  
-      	updateProgressBar();
-      
-      	time_update_interval = setInterval(function () {
-      		updateProgressBar();
-      	}, 1000);		  
-      }
-      function setupListener (){
-      document.getElementById('full').addEventListener('click', playFullscreen);
-      document.getElementById('play').addEventListener('click', playVid);
-      document.getElementById('pause').addEventListener('click', pauseVid);
-      }
-      function playVid (){
-      document.getElementById('play').style.display = 'none';
-      document.getElementById('pause').style.display = 'block';
-      }
-      function pauseVid (){
-      document.getElementById('pause').style.display = 'none';
-      document.getElementById('play').style.display = 'block';
-      }
-      function playFullscreen (){
-      	  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-      	  if (requestFullScreen) {
-      		requestFullScreen.bind(iframe)();
-      	  }
-      }
-      function updateProgressBar(){
-      	document.querySelector('.viewed').style.width = (player.getCurrentTime() / player.getDuration() * 100) +'%'
-      }
-      function progress (event) {
-      	var line_width = jQuery('#line').width();
-      	var pos = jQuery('#line').offset();
-      	var elem_left = pos.left;		
-      	var Xinner = event.pageX - elem_left;
-      	var newTime = player.getDuration() * (Xinner / line_width);
-      	player.seekTo(newTime);
-      	if(player.playVideo()){
-      	document.getElementById('play').style.display = 'none';
-      	document.getElementById('pause').style.display = 'block';}
-      }
-    </script>
-  </div>
-</section>
-<section class="section">
-  <h1 class="section-title">Club base</h1>
-  <div class="map-container">
-    <div id="map"></div>
-    <div class="map__info">
-      <ul class="map-list">
-        <li class="map-list__item">
-          <p class="map__text">Meet us!</p>
-        </li>
-        <li class="map-list__item">
-          <address class="map__address">1259 California st San Francisco, CA</address>
-        </li>
-        <li class="map-list__item map-list__item--right-position">
-          <button class="map-button location-button"></button>
-          <button class="map-button pin-button"></button>
-        </li>
-      </ul>
-    </div>
+<section class="section calendar-section">
+  <h1 class="section-title">Events calendar</h1>
+  <div class="calendar-wrapper">
+    <ul class="calendar-list">
+      <li class="calendar-list__item">
+        <h1 class="calendar__date"></h1>
+      </li>
+      <li class="calendar-list__item">
+        <div class="calendar__month-block">
+          <button class="calendar-button calendar-button--left"></button>
+          <p class="calendar__month-title"></p>
+          <button class="calendar-button calendar-button--right"></button>
+        </div>
+      </li>
+      <li class="calendar-list__item">
+        <table class="calendar-table" id="calendar">
+          <thead>
+            <tr class="hidden">
+              <td></td>
+              <td colspan="5"></td>
+              <td></td>
+            </tr>
+            <tr class="calendar-table__months">
+              <td class="calendar-table__months-cell">Mon </td>
+              <td class="calendar-table__months-cell">Tue</td>
+              <td class="calendar-table__months-cell">Wed</td>
+              <td class="calendar-table__months-cell">Thu</td>
+              <td class="calendar-table__months-cell">Fri</td>
+              <td class="calendar-table__months-cell">Sat</td>
+              <td class="calendar-table__months-cell">Sun</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="calendar-table__days">
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+            </tr>
+            <tr class="calendar-table__days">
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+            </tr>
+            <tr class="calendar-table__days">
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+            </tr>
+            <tr class="calendar-table__days">
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+            </tr>
+            <tr class="calendar-table__days">
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+            </tr>
+            <tr class="calendar-table__days">
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+              <td class="calendar-table__date-cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li class="calendar-list__item">
+        <p class="calendar__text">Today</p>
+      </li>
+    </ul>
   </div>
 </section>
     </main>

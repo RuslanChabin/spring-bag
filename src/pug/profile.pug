@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru")
+	include pug-templates/head
+	body
+		include pug-templates/header
+		main.container
+			section.section--padding-top
+				h1.section-title Hello dear user!
+				include pug-templates/chart
+			section
+				include pug-templates/stage
+		include pug-templates/users
+		include pug-templates/messaging
+		include pug-templates/footer

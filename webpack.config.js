@@ -36,6 +36,16 @@ module.exports = {
 			  }],
 			},
 			{
+            test: /\.js$/,
+            exclude: /(node_modules|bower_components)/,
+            	use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["@babel/preset-env"]
+                    }
+                }
+            },
+			{
 			test: /\.scss/,
 			use: ExtractTextPlugin.extract({
 				use: [
@@ -102,7 +112,16 @@ module.exports = {
 			minimize: true
 		}),
 		new HtmlWebpackPlugin({
-			template: './index.pug'
+			filename: 'index.html',
+			template: './pug/index.pug',
+		  }),
+		new HtmlWebpackPlugin({
+			filename: 'news.html',
+			template: './pug/news.pug',
+		  }),
+		new HtmlWebpackPlugin({
+			filename: 'profile.html',
+			template: './pug/profile.pug',
 		  }),
 	],
 };

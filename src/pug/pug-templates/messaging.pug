@@ -1,0 +1,21 @@
+div.mail-container
+	input.hidden.mail-input(type="checkbox" id="mail-checkbox" name="messages")
+	label.mail-label(for="mail-checkbox") NEW MESSAGE
+	div.output-message
+		h1.user-message-name Sarah Brown
+		ul.message-menu-list
+			li.message-menu-list__item
+				button.button-message
+			li.message-menu-list__item
+				img.user-profile__img(src="images/user2.png")
+			li.message-menu-list__item
+				button.camera-button
+		ul.output-message-list
+			li.output-message-list__item
+				p.output-message-text Hey! So are we cool to meet at the art gallery? Say 8pm
+		form.output-message-form
+			textarea.output-message-form__input(
+			rows="3"
+			type="text"
+			name="message")
+			button.button.button--large.button--strech Reply

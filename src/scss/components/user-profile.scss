@@ -1,6 +1,16 @@
 .profile-container{
 	width: auto;
 	height: 100%;
+	position: fixed;
+	left: 30px;
+	top: 130px;
+}
+
+.pofile-title{
+	color: $green;
+	margin-bottom: 10px;
+	margin-left: -10px;
+	text-transform: uppercase;
 }
 
 .user-profile{
@@ -24,6 +34,7 @@
 	background-color: $grey;
 	margin-left: 10px;
 	text-align: center;
+	visibility: collapse;
 	
 	&::before{
 		content: "";
@@ -41,6 +52,10 @@
 			border-right: 5px solid $green;
 		}
 	}
+}
+
+.user-profile:hover .user-profile__info{
+	visibility: visible;
 }
 
 .user-profile__name{
@@ -68,9 +83,9 @@
 
 .user-profile-list{
 	display: flex;
+	justify-content: center;
 	list-style: none;
 	margin: 0;
-	margin-left: -17px;
 	margin-top: 11px;
 }
 

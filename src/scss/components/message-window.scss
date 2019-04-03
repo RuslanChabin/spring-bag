@@ -1,9 +1,34 @@
+.mail-label{
+	position: fixed;
+	top: 300px;
+	right: -58px;
+	display: block;
+	width: 150px;
+	height: 45px;
+	padding-top: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-family: "Lato Black";
+	transform: rotate(-90deg);
+	background-color: $green;
+	transition: right 1s ease;
+	z-index: 1000;
+}
+
 .output-message{
+	position: fixed;
+	top: 150px;
+	right: -300px;
 	width: 279px;
 	min-height: 410px;
 	padding: 5px;
 	background-image: linear-gradient($green 80px, $darkgreen 80px, $darkgreen 115px, $lightgrey 115px, $lightgrey 100%);
 	border-radius: 3px;
+	transition: right 1s ease;
+	z-index: 1000;
 }
 
 .user-message-name{
@@ -94,5 +119,13 @@
 	word-spacing: 2.7px;
 	padding: 16px 15px;
 	margin-bottom: 18px;
+}
+
+.mail-input:checked ~ .mail-label {
+	right: 240px;
+}
+
+.mail-input:checked ~ .output-message {
+	right: 0;
 }
 

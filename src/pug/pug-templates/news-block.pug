@@ -1,4 +1,5 @@
 section.section
+	h1.section-title News & Events
 	div.news-container
 		ul.news-list
 			li.news-list__item
@@ -58,22 +59,4 @@ section.section
 							h1.event__title this is the title
 							p.event__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						button.button.button--contgreen-border.button--width.event__button add to calendar
-			li.news-list__item
-				a.news-link(href="#")
-					div.news__block
-						img.news__img(src="images/news.png")
-						div.news__content
-							h1.news__title it's all going downhill
-							p.news__date
-								time(pubdate="2018-08-22") 22 august 2018
-							p.news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lorem urna, porta sit amet felis et, ullamcorper tristique leo.
-			li.news-list__item
-				div.news__block
-					img.news__img(src="images/events.png")
-					div.news__content.news__content--green
-						a.news-link(href="#")
-							p.event__date 
-								time(pubdate="2018-08-24") 24 <span class="event__month">Aug</span>
-							h1.event__title this is the title
-							p.event__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						button.button.button--contgreen-border.button--width.event__button add to calendar
+	a.button.button--orange.button--center-position(href="news.html") Get more...					

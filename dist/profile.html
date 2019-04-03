@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=cd9ea95a-f6f5-4613-88e8-2e7e1ea7a580&amp;lang=ru_RU" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <title>Veloclub</title>
+<link href="./css/style.css" rel="stylesheet"></head>
+  <body>
+<header class="header"><a class="header-logo" href="index.html"></a>
+  <ul class="header-menu">
+    <li class="header-menu__item"><a class="button button--large" href="index.html">Main</a></li>
+    <li class="header-menu__item"><a class="button button--large" href="news.html">News & Events</a></li>
+    <li class="header-menu__item"><a class="button button--large" href="gallery.html">Gallery</a></li>
+    <li class="header-menu__item"><a class="button button--large" href="profile.html">My profile</a></li>
+    <li class="header-menu__item">
+      <div class="header-search-wrapper">
+<form class="searching-form" action="" method="get">
+  <p class="searching-form__content">
+    <label class="hidden" for="search">Searching form</label>
+    <input class="searching-form__input" id="search" type="text" name="search" placeholder="Search">
+    <button class="button searching-form__button searching-form__button--green" type="submit">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="14px">
+        <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M13.392,13.539 C12.844,14.088 11.955,14.088 11.406,13.539 L7.864,9.997 C5.920,11.126 3.396,10.877 1.731,9.213 C-0.252,7.229 -0.252,4.013 1.731,2.030 C3.715,0.046 6.931,0.046 8.914,2.030 C10.493,3.608 10.793,5.959 9.860,7.856 L13.474,11.471 C14.023,12.019 13.941,12.991 13.392,13.539 ZM7.631,3.312 C6.356,2.037 4.289,2.037 3.014,3.312 C1.739,4.588 1.739,6.655 3.014,7.930 C4.289,9.205 6.356,9.205 7.631,7.930 C8.907,6.655 8.907,4.588 7.631,3.312 Z"></path>
+      </svg>
+    </button>
+  </p>
+</form>
+      </div>
+    </li>
+  </ul>
+</header>
+    <main class="container">
+      <section class="section--padding-top">
+        <h1 class="section-title">Hello dear user!</h1>
+<div class="chart-container">
+  <h2 class="title title--green">Your progress</h2>
+  <ul class="chart-list">
+    <li class="chart-list__item">
+      <div class="chart-wrapper">
+        <div class="chart"></div>
+        <div class="chart__left-part">
+          <div class="chart__left-inner"></div>
+        </div>
+        <div class="chart__right-part">
+          <div class="chart__right-inner"></div>
+        </div><span class="chart__number">38</span>
+      </div>
+    </li>
+    <li class="chart-list__item">
+      <div class="chart-wrapper">
+        <div class="chart"></div>
+        <div class="chart__left-part">
+          <div class="chart__left-inner"></div>
+        </div>
+        <div class="chart__right-part">
+          <div class="chart__right-inner"></div>
+        </div><span class="chart__number">38</span>
+      </div>
+    </li>
+    <li class="chart-list__item">
+      <div class="chart-wrapper">
+        <div class="chart"></div>
+        <div class="chart__left-part">
+          <div class="chart__left-inner"></div>
+        </div>
+        <div class="chart__right-part">
+          <div class="chart__right-inner"></div>
+        </div><span class="chart__number">38</span>
+      </div>
+    </li>
+    <li class="chart-list__item">
+      <div class="chart-wrapper">
+        <div class="chart"></div>
+        <div class="chart__left-part">
+          <div class="chart__left-inner"></div>
+        </div>
+        <div class="chart__right-part">
+          <div class="chart__right-inner"></div>
+        </div><span class="chart__number">38</span>
+      </div>
+    </li>
+    <li class="chart-list__item">
+      <div class="pai-chart"></div>
+    </li>
+  </ul>
+</div>
+      </section>
+      <section>
+<h2 class="title">Your stage now</h2>
+<ul class="stages-list">
+  <li class="stages-list__item">1</li>
+  <li class="stages-list__item">2</li>
+  <li class="stages-list__item">3</li>
+  <li class="stages-list__item stages-list__item--grey">4</li>
+  <li class="stages-list__item stages-list__item--grey">5</li>
+</ul>
+      </section>
+    </main>
+<div class="profile-container">
+  <h1 class="pofile-title">Users online</h1>
+  <div class="user-profile">
+    <div class="user-profile__avatar"><img class="user-profile__img" src="images/user1.png"></div>
+    <div class="user-profile__info">
+      <p class="user-profile__name">John Smith</p>
+      <p class="user-profile__proffesion">UX Designer</p>
+      <ul class="user-profile-list">
+        <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--grey" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--orange" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--grey" href="#"><i class="fab fa-dribbble"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="user-profile">
+    <div class="user-profile__avatar"><img class="user-profile__img" src="images/user2.png"></div>
+    <div class="user-profile__info user-profile__info--green">
+      <p class="user-profile__name user-profile__name--white">Sarah Brown</p>
+      <p class="user-profile__proffesion user-profile__proffesion--white">Developer</p>
+      <ul class="user-profile-list">
+        <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-dribbble"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="mail-container">
+  <input class="hidden mail-input" type="checkbox" id="mail-checkbox" name="messages">
+  <label class="mail-label" for="mail-checkbox">NEW MESSAGE</label>
+  <div class="output-message">
+    <h1 class="user-message-name">Sarah Brown</h1>
+    <ul class="message-menu-list">
+      <li class="message-menu-list__item">
+        <button class="button-message"></button>
+      </li>
+      <li class="message-menu-list__item"><img class="user-profile__img" src="images/user2.png"></li>
+      <li class="message-menu-list__item">
+        <button class="camera-button"></button>
+      </li>
+    </ul>
+    <ul class="output-message-list">
+      <li class="output-message-list__item">
+        <p class="output-message-text">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+      </li>
+    </ul>
+    <form class="output-message-form">
+      <textarea class="output-message-form__input" rows="3" type="text" name="message"></textarea>
+      <button class="button button--large button--strech">Reply</button>
+    </form>
+  </div>
+</div>
+<footer class="footer">
+  <ul class="footer-list">
+    <li class="footer-list__item">
+      <address class="address">1259 California st San Francisco, CA</address>
+    </li>
+    <li class="footer-list__item">
+      <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+    </li>
+    <li class="footer-list__item">
+      <h1 class="footer__title">Our Socials</h1>
+      <ul class="socials-list">
+        <li class="socials-list__item"><a class="footer-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="socials-list__item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="socials-list__item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </li>
+    <li class="footer-list__item">
+      <button class="button button--orange button--large">Write us</button>
+    </li>
+    <li class="footer-list__item"><a class="footer-logo" href="index.html"></a></li>
+  </ul>
+</footer>
+  <script type="text/javascript" src="js/main.js"></script></body>
+</html>
