@@ -1,14 +1,16 @@
-.header {
+.header{
 	position: relative;
+	display: flex;
+	justify-content: center;
 	width: 100%;
 	
 	background-color: $orange;
 }
 
-.logo {
+.header-logo{
 	position: absolute;
 	top: 5px;
-	left: 15%;
+	left: 10%;
 	display: block;
 	width: 80px;
 	height: 70px;
@@ -16,7 +18,7 @@
 	background-image: url(../images/logo.svg);
 	background-size: cover;
 	
-	&::after {
+	&::after{
 		content: "VELOCLUB";
 		position: absolute;
 		top: 25px;
@@ -28,20 +30,27 @@
 	}
 }
 
-.header-menu {
+.header-menu{
 	display: flex;
 	justify-content: center;
-	width: 70%;
+	width: 80%;
 	height: auto;
 	
 	margin-left: auto;
-	margin-right: auto;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	
 	list-style: none;
 }
 
-.header-menu__item:not(:last-child) {
+.header-menu__item:not(:last-child){
 	margin-right: 10px;
+}
+
+.header-menu__item:last-child{
+	width: 400px;
+}
+
+.header-search-wrapper{
+	padding-top: 2px;
 }

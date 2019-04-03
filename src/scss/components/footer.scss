@@ -1,0 +1,101 @@
+.footer{
+	width: 100%;
+	min-height: 200px;
+	padding: 30px 0;
+	
+	font-size: 14px;
+	color: white;
+	
+	background-color: $green;
+}
+
+.footer-list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 0 auto;
+	padding: 10px 50px;
+}
+
+.footer-list__item{
+	align-self: stretch;
+}
+
+.footer-list__item:not(:last-child){
+	padding-right: 10px;
+	padding-top: 35px;
+	margin-right: 10px;
+	border-right: 2px solid white
+}
+
+.footer__text{
+	display: block;
+	max-width: 350px;
+}
+
+.footer__title{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: -25px;
+	margin-bottom: 5px;
+}
+
+.socials-list{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.socials-list__item:not(:last-child){
+	margin-right: 10px;
+}
+
+.footer-link{
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	color: $green;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.footer-logo{
+	position: relative;
+	display: block;
+	width: 115px;
+	height: 101px;
+	margin-left: 100px;
+	
+	background-image: url(../images/left-logo.svg);
+	background-size: cover;
+	
+	transform: rotate(15deg);
+	transition: transform 0.5s ease;
+	
+	&:hover{
+		transform: rotate(0deg);
+	}
+	
+	&:hover::before{
+			transform: rotate(0deg);
+		}
+	
+	&::before{
+		content: "VELOCLUB";
+		position: absolute;
+		top: 40px;
+		right: 130px;
+		
+		transform: rotate(-15deg);
+		transition: transform 0.5s ease, top 0.5s ease;
+		
+		color: white;
+		font-size: 16px;
+		font-family: "Lato Black";
+	}
+}
