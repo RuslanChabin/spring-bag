@@ -123,6 +123,10 @@ module.exports = {
 			filename: 'profile.html',
 			template: './pug/profile.pug',
 		  }),
+		new HtmlWebpackPlugin({
+			filename: 'gallery.html',
+			template: './pug/gallery.pug',
+		  }),
 	],
 };
 

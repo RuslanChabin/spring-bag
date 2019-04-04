@@ -1,0 +1,37 @@
+.gallery-section{
+	width: 100%;
+	padding-right: 10px;
+}
+
+.gallery-list{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+}
+
+.gallery-list__item{
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.gallery-img{
+	display: block;
+	max-width: 200px;
+	height: auto;
+	border: 3px solid $green;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.button-wrapper{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.gallery-button{
+	margin: 10px;
+}
