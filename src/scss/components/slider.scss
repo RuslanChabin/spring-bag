@@ -1,5 +1,28 @@
-.slider-form{
+.option-form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 50px;
+	align-items: center;
+}
+
+.form-block{
 	position: relative;
+	margin: 5px 30px;
+	min-height: 50px;
+	
+	&--small{
+		width: 40%;
+	}
+}
+
+.form-title{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 10px;
+	margin-top: 0;
+	align-self: baseline;
+	color: $darkgrey;
 }
 
 .slider{
@@ -53,7 +76,7 @@
 
 .slider-output{
 	position: absolute;
-	top: -28px;
+	top: -32px;
 	left: 90px;
 	width: 35px;
 	background-color: $orange;
@@ -75,7 +98,7 @@
 	
 	&--green{
 		position: absolute;
-		top: 10px;
+		top: 5px;
 		left: 0;
 		height: 6px;
 		width: 200px;

@@ -1,7 +1,22 @@
-@keyframes percents {
+@keyframes percents38r{
 	from {transform: rotate(0);}
 	to {transform: rotate(112deg);}
-} 
+}
+
+@keyframes percents50r{
+	from {transform: rotate(0);}
+	to {transform: rotate(180deg);}
+}
+
+@keyframes percents12l{
+	from {transform: rotate(0);}
+	to {transform: rotate(12deg);}
+}
+
+@keyframes percents39l{
+	from {transform: rotate(0);}
+	to {transform: rotate(141deg);}
+}
 
 .chart-list{
 	display: flex;
@@ -11,7 +26,11 @@
 }
 
 .chart-list__item{
-	margin-right: 10px;
+	margin-right: 13px;
+}
+
+.chart-list__item:first-child{
+	margin-right: -23px;
 }
 
 .chart-wrapper{
@@ -23,8 +42,8 @@
 
 .chart{
 	position: absolute;
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 	padding: 0;
 	border-radius: 50%;
 	border: 5px solid $orange;
@@ -33,9 +52,9 @@
 .chart__left-part{
 	position: absolute;
 	top: -4px;
-	left: -3px;
-	width: 58px;
-	height: 116px;
+	left: -1px;
+	width: 53px;
+	height: 106px;
 	margin: 0;
 	padding: 0;
 	border-radius: 100% 0 0 100% / 50% 0 0 50%;
@@ -45,9 +64,9 @@
 .chart__right-part{
 	position: absolute;
 	top: -4px;
-	right: 8px;
-	width: 58px;
-	height: 116px;
+	right: 18px;
+	width: 53px;
+	height: 106px;
 	margin: 0;
 	padding: 0;
 	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
@@ -58,30 +77,54 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 48px;
-	height: 96px;
+	width: 44px;
+	height: 88px;
 	border-radius: 100% 0 0 100% / 50% 0 0 50%;
 	border: 10px solid white;
 	border-right: 0;
 	transform: rotate(0);
 	transform-origin: right;
+	
+	&--12l{
+		animation: percents12l 0.4s;
+		animation-timing-function: linear;
+		animation-delay: 3s;
+		animation-fill-mode: forwards;
+	}
+	
+	&--39l{
+		animation: percents39l 2s;
+		animation-timing-function: linear;
+		animation-delay: 3s;
+		animation-fill-mode: forwards;
+	}
 }
 
 .chart__right-inner{
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 48px;
-	height: 96px;
+	width: 44px;
+	height: 88px;
 	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
 	border: 10px solid white;
 	border-left: 0;
 	transform: rotate(0);
 	transform-origin: left;
-	animation: percents 2s;
-	animation-timing-function: linear;
-	animation-delay: 1s;
-	animation-iteration-count: infinite;
+	
+	&--38r{
+		animation: percents38r 2s;
+		animation-timing-function: linear;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+	}
+	
+	&--50r{
+		animation: percents50r 2s;
+		animation-timing-function: linear;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+	}
 }
 
 .chart__number{

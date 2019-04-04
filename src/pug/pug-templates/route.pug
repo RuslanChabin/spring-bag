@@ -1,0 +1,85 @@
+h2.title Constract your own route
+div.route-container
+	form.option-form
+		h3.form-title Select route distance
+		div.form-block
+			input.slider.slider--orange(
+			type="range"
+			min="0"
+			max="100"
+			value="40"
+			step="10"
+			name="slider1")
+			label.slider-output(for="slider1")
+		h3.form-title Select the number of routes
+		div.form-block
+			input.slider.slider--green(
+				type="range"
+				min="0"
+				max="100"
+				value="75"
+				step="25"
+				name="slider2")
+			label.slider-output--green(for="slider2")
+			ul.slider-list
+				li.slider-list__item 0
+				li.slider-list__item 25
+				li.slider-list__item 50
+				li.slider-list__item 75
+				li.slider-list__item 100
+		div.form-block.form-block--small
+			ul.tic-box-list
+				li.tic-box-list__item
+					input.tic-box.hidden#ticBox1(
+					type="checkbox")
+					label.tic-box-label(for="ticBox1")
+					p.tic-box__title Somthing 1
+				li.tic-box-list__item
+					input.tic-box.hidden#ticBox2(
+					type="checkbox")
+					label.tic-box-label(for="ticBox2")
+					p.tic-box__title Somthing 2
+				li.tic-box-list__item
+					input.tic-box.hidden#ticBox3(
+					type="checkbox")
+					label.tic-box-label(for="ticBox3")
+					p.tic-box__title Somthing 3
+				li.tic-box-list__item
+					input.tic-box.hidden#ticBox4(
+					type="checkbox")
+					label.tic-box-label(for="ticBox4")
+					p.tic-box__title Somthing 4
+				li.tic-box-list__item
+					input.tic-box.hidden#ticBox5(
+					type="checkbox")
+					label.tic-box-label(for="ticBox5")
+					p.tic-box__title Somthing 5
+		div.form-block.form-block--small
+			h3.form-title Hard journey mode
+			input.toggle.hidden#toggle(
+			type="checkbox")
+			label.toggle-label(for="toggle")
+		button.button.button--green-border.button--large Make my way
+	div.map-container
+		div#map
+	script.
+		//orange range input
+
+		var range = document.querySelector('.slider--orange');
+
+		document.querySelector('.slider-output').innerHTML = range.value,
+
+		range.addEventListener('input', function (){
+		  document.querySelector('.slider-output').innerHTML = range.value},false);
+
+		range.addEventListener('input', function () {   document.querySelector('.slider-output').style.left = 2.32*range.value +'px'
+		},false);
+
+		//green range input
+
+		var range1 = document.querySelector('.slider--green');
+
+		range1.addEventListener('input', function () {   document.querySelector('.slider-output--green').style.width = 2.5*range1.value +'px'
+		},false);
+
+		

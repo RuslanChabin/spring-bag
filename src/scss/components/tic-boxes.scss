@@ -1,3 +1,21 @@
+.tic-box-list{
+	list-style: none;
+}
+
+.tic-box-list__item{
+	display: flex;
+	min-width: 100px;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+.tic-box__title{
+	margin-left: 10px;
+	padding-top: 1px;
+	font-size: 16px;
+}
+
 .tic-box-label{
 	position: relative;
 	display: block;

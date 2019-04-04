@@ -3,12 +3,13 @@
 	display: flex;
 	padding: 0;
 	justify-content: space-between;
-	width: 41%;
+	max-width: 55%;
 	background-image: linear-gradient(to right, $orange 50%, $grey 50%, $grey 100%);
 	background-position: 100% center;
 	background-repeat: no-repeat;
 	background-size: 100% 15%;
 	margin: 0 auto;
+	margin-bottom: 50px;
 }
 
 .stages-list__item{
