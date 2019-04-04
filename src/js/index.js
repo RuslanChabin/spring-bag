@@ -1,3 +1,19 @@
+//modal
+
+var popupBtn = document.querySelector(".button-write");
+var popup = document.querySelector(".modal-window");
+var closeBtn = popup.querySelector(".button-modal-close");
+
+popupBtn.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+});
+
+closeBtn.addEventListener("click", function (evt){
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+});
+
 //map
 
 ymaps.ready(init);
@@ -82,3 +98,4 @@ document.querySelector('.calendar-button--left').onclick = function() {
 document.querySelector('.calendar-button--right').onclick = function() {
   Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
 }
+

@@ -285,10 +285,31 @@
       </ul>
     </li>
     <li class="footer-list__item">
-      <button class="button button--orange button--large">Write us</button>
+      <button class="button button--orange button--large button-write">Write us</button>
     </li>
     <li class="footer-list__item"><a class="footer-logo" href="index.html"></a></li>
   </ul>
 </footer>
+<section class="modal-window">
+  <div class="modal-wrapper">
+    <form class="message-form" name="message-form" method="post">
+      <ul class="message-form-list">
+        <li class="message-form-list__item">
+          <input class="message-form__input" type="text" name="name" placeholder="Your Name" required><span class="message-form__hint"></span>
+        </li>
+        <li class="message-form-list__item">
+          <input class="message-form__input" type="email" name="email" placeholder="Your Email" required><span class="message-form__hint"></span>
+        </li>
+        <li class="message-form-list__item">
+          <textarea class="message-form__textarea" name="text" placeholder="Your Message" rows="4" required></textarea>
+        </li>
+        <li class="message-form-list__item">
+          <input class="button button--large button--right" type="submit">
+        </li>
+      </ul>
+    </form>
+    <button class="button button--orange-border button-modal-close">Close</button>
+  </div>
+</section>
   <script type="text/javascript" src="js/main.js"></script></body>
 </html>

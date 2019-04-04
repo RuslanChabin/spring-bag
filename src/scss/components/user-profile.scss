@@ -1,26 +1,29 @@
 .profile-container{
 	width: auto;
-	height: 100%;
+	height: auto;
 	position: fixed;
-	left: 30px;
+	left: 0;
 	top: 130px;
+	z-index: 3;
 }
 
 .pofile-title{
+	font-size: 14px;
 	color: $green;
-	margin-bottom: 10px;
-	margin-left: -10px;
+	margin: 20px;
 	text-transform: uppercase;
 }
 
 .user-profile{
 	display: flex;
 	margin-bottom: 22px;
+	width: auto;
 }
 
 .user-profile__img{
 	width: 84px;
 	height: 84px;
+	margin-left: 20px;
 	border-radius: 50%;
 	border: 5px solid $grey;
 	background-color: $grey;
@@ -34,7 +37,7 @@
 	background-color: $grey;
 	margin-left: 10px;
 	text-align: center;
-	visibility: collapse;
+	display: none;
 	
 	&::before{
 		content: "";
@@ -55,7 +58,7 @@
 }
 
 .user-profile:hover .user-profile__info{
-	visibility: visible;
+	display: block;
 }
 
 .user-profile__name{

@@ -1,0 +1,32 @@
+section.modal-window
+	div.modal-wrapper
+		form.message-form(
+			name="message-form"
+			method="post")
+				ul.message-form-list
+					li.message-form-list__item
+						input.message-form__input(
+						type="text"
+						name="name"
+						placeholder="Your Name"
+						required)
+						span.message-form__hint
+					li.message-form-list__item
+						input.message-form__input(
+						type="email"
+						name="email"
+						placeholder="Your Email"
+						required)
+						span.message-form__hint
+					li.message-form-list__item
+						textarea.message-form__textarea(
+						name="text"
+						placeholder="Your Message"
+						rows="4"
+						required)
+					li.message-form-list__item
+						input.button.button--large.button--right(
+						type="submit"
+						)
+		button.button.button--orange-border.button-modal-close Close
+		
