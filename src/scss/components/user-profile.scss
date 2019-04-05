@@ -1,20 +1,41 @@
+.users-section__label{
+	position: fixed;
+	background-color: $orange;
+	color: white;
+	top: 300px;
+	left: -58px;
+	display: block;
+    width: 150px;
+    height: 45px;
+    padding-top: 20px;
+	border: 2px solid white;
+	border-bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+	text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Lato Black";
+    transform: rotate(90deg);
+    transition: left 1s ease;
+    z-index: 10;
+}
+
 .profile-container{
 	width: auto;
 	height: auto;
 	position: fixed;
-	left: 0;
-	top: 130px;
-	z-index: 3;
-}
-
-.pofile-title{
-	font-size: 14px;
-	color: $green;
-	margin: 20px;
-	text-transform: uppercase;
+	left: -140px;
+	top: 200px;
+	padding: 20px;
+	z-index: 30;
+	background-color: $orange;
+	border-radius: 3px;
+	transition: left 1s ease;
 }
 
 .user-profile{
+	position: relative;
 	display: flex;
 	margin-bottom: 22px;
 	width: auto;
@@ -23,14 +44,14 @@
 .user-profile__img{
 	width: 84px;
 	height: 84px;
-	margin-left: 20px;
 	border-radius: 50%;
 	border: 5px solid $grey;
 	background-color: $grey;
 }
 
 .user-profile__info{
-	position: relative;
+	position: absolute;
+	left: 91px;
 	width: 163px;
 	height: 93px;
 	border-radius: 7px;
@@ -111,5 +132,13 @@
 	&--orange{
 		color: $orange;
 	}
+}
+
+.users-section__input:checked ~ .users-section__label{
+	left: 85px;
+}
+
+.users-section__input:checked ~ .profile-container{
+	left: 0;
 }
 

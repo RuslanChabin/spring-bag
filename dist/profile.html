@@ -11,6 +11,23 @@
 <link href="./css/style.css" rel="stylesheet"></head>
   <body>
 <header class="header"><a class="header-logo" href="index.html"></a>
+<div class="menu-wrapper">
+  <ul class="menu-list">
+    <li class="menu-list__item">
+      <p class="dropdown-menu__option">MENU</p>
+    </li>
+    <li class="menu-list__item">
+      <input class="hidden dropdown-menu__input" id="dropdownInput" type="checkbox">
+      <label class="dropdown-menu__button" for="dropdownInput"></label>
+      <ul class="dropdown-menu-list">
+        <li class="dropdown-menu-list__item"><a class="dropdown-menu__link" href="index.html">Main</a></li>
+        <li class="dropdown-menu-list__item"> <a class="dropdown-menu__link" href="news.html">News & events</a></li>
+        <li class="dropdown-menu-list__item"> <a class="dropdown-menu__link" href="gallery.html">Gallery</a></li>
+        <li class="dropdown-menu-list__item"> <a class="dropdown-menu__link" href="profile.html">My profile</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
   <ul class="header-menu">
     <li class="header-menu__item"><a class="button button--large" href="index.html">Main</a></li>
     <li class="header-menu__item"><a class="button button--large" href="news.html">News & Events</a></li>
@@ -182,33 +199,37 @@
 </div>
       </section>
     </main>
-<div class="profile-container">
-  <h1 class="pofile-title">Users online</h1>
-  <div class="user-profile">
-    <div class="user-profile__avatar"><img class="user-profile__img" src="images/user1.png"></div>
-    <div class="user-profile__info">
-      <p class="user-profile__name">John Smith</p>
-      <p class="user-profile__proffesion">UX Designer</p>
-      <ul class="user-profile-list">
-        <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--grey" href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--orange" href="#"><i class="fab fa-twitter"></i></a></li>
-        <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--grey" href="#"><i class="fab fa-dribbble"></i></a></li>
-      </ul>
+<section class="users-section">
+  <input class="hidden users-section__input" id="usersOnline" type="checkbox" name="users-online">
+  <label class="users-section__label" for="usersOnline">Users online</label>
+  <div class="profile-container">
+    <h1 class="pofile-title hidden">Users online</h1>
+    <div class="user-profile">
+      <div class="user-profile__avatar"><img class="user-profile__img" src="images/user1.png"></div>
+      <div class="user-profile__info">
+        <p class="user-profile__name">John Smith</p>
+        <p class="user-profile__proffesion">UX Designer</p>
+        <ul class="user-profile-list">
+          <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--grey" href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--orange" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="user-profile-list__item"><a class="user-profile__link user-profile__link--grey" href="#"><i class="fab fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="user-profile">
+      <div class="user-profile__avatar"><img class="user-profile__img" src="images/user2.png"></div>
+      <div class="user-profile__info user-profile__info--green">
+        <p class="user-profile__name user-profile__name--white">Sarah Brown</p>
+        <p class="user-profile__proffesion user-profile__proffesion--white">Developer</p>
+        <ul class="user-profile-list">
+          <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-dribbble"></i></a></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="user-profile">
-    <div class="user-profile__avatar"><img class="user-profile__img" src="images/user2.png"></div>
-    <div class="user-profile__info user-profile__info--green">
-      <p class="user-profile__name user-profile__name--white">Sarah Brown</p>
-      <p class="user-profile__proffesion user-profile__proffesion--white">Developer</p>
-      <ul class="user-profile-list">
-        <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-twitter"></i></a></li>
-        <li class="user-profile-list__item"><a class="user-profile__link" href="#"><i class="fab fa-dribbble"></i></a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+</section>
 <div class="mail-container">
   <input class="hidden mail-input" type="checkbox" id="mail-checkbox" name="messages">
   <label class="mail-label" for="mail-checkbox">NEW MESSAGE</label>

@@ -10,13 +10,32 @@
 .header-logo{
 	position: absolute;
 	top: 5px;
-	left: 10%;
+	left: 5vw;
 	display: block;
 	width: 80px;
 	height: 70px;
 	
 	background-image: url(../images/logo.svg);
 	background-size: cover;
+	
+	@media screen and (max-width: 1220px){
+		top: 25px;
+		left: 10vw;
+	}
+	
+	@media screen and (max-width: 955px){
+		left: 5vw;
+	}
+	
+	@media screen and (max-width: 860px){
+		top: 40px;
+		left: 3vw;
+	}
+	
+	@media screen and (max-width: 720px){
+		top: 10px;
+		left: 5px;
+	}
 	
 	&::after{
 		content: "VELOCLUB";
@@ -27,11 +46,16 @@
 		color: white;
 		font-size: 16px;
 		font-family: "Lato Black";
+		
+		@media screen and (max-width: 720px){
+			display: none;
+		}
 	}
 }
 
 .header-menu{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	width: 80%;
 	height: auto;
@@ -41,10 +65,15 @@
 	padding-bottom: 25px;
 	
 	list-style: none;
+	
+	@media screen and (max-width: 720px){
+		display: none;
+	}
 }
 
 .header-menu__item:not(:last-child){
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .header-menu__item:last-child{
