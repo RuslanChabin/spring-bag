@@ -24,10 +24,28 @@
 }
 
 .footer-list__item:not(:last-child){
-	padding-right: 10px;
-	padding-top: 35px;
-	margin-right: 10px;
-	border-right: 2px solid white
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	border-right: 2px solid white;
+	@media screen and (max-width: 673px){
+		border-right: 0;
+		border-bottom: 2px solid white;
+	}
+}
+
+.footer-list__item:last-child{
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10px;
+	@media screen and (max-width: 1098px){
+		border-right: 2px solid white
+	}
+	@media screen and (max-width: 673px){
+		border-right: 0;
+	}
 }
 
 .footer__text{

@@ -1,6 +1,6 @@
 .mail-label{
 	position: fixed;
-	top: 300px;
+	top: 310px;
 	right: -58px;
 	display: block;
 	width: 150px;
@@ -18,6 +18,10 @@
 	background-color: $green;
 	transition: right 1s ease;
 	z-index: 1000;
+	@media screen and (max-width: 410px){
+		right: -65px;
+		padding-top: 5px;
+	}
 }
 
 .output-message{
@@ -125,6 +129,9 @@
 
 .mail-input:checked ~ .mail-label {
 	right: 240px;
+	@media screen and (max-width: 410px){
+		right: 215px;
+	}
 }
 
 .mail-input:checked ~ .output-message {

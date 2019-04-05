@@ -19,24 +19,31 @@
 	padding: 0;
 	margin: 0;
 	width: 285px;
-	height: 210px;
+	min-height: 210px;
 	display: flex;
+	@media screen and (max-width: 410px){
+		width: 220px;
+	}
 }
 
 .news__img{
-	width: 95px;
-	height: 210px;
+	max-width: 95px;
+	min-height:  210px;
 	border-radius: 3px 0 0 3px;
 }
 
 .news__content{
 	width: 190px;
-	height: 210px;
+	min-height: 210px;
 	padding-left: 23px;
 	background-color: $orange;
 	border-radius: 0 3px 3px 0;
 	color: white;
 	font-size: 11px;
+	
+	@media screen and (max-width: 410px){
+		width: 100px;
+	}
 	
 	&--green{
 		background-color: $green;
@@ -44,7 +51,7 @@
 }
 
 .news__title{
-	font-size: 28px;
+	font-size: 2.8em;
 	font-family: "Lato Light";
 	line-height: 29px;
 	padding: 0;
@@ -54,7 +61,7 @@
 }
 
 .news__date{
-	font-size: 11px;
+	font-size: 1.1em;
 	font-family: "Lato Black";
 	text-transform: uppercase;
 	padding: 0;
@@ -66,10 +73,13 @@
 	width: 155px;
 	max-height: 70px;
 	overflow: hidden;
+	@media screen and (max-width: 410px){
+		width: 90px;
+	}
 }
 
 .event__date{
-	font-size: 73px;
+	font-size: 7.3em;
 	font-family: "Lato light";
 	padding: 0;
 	padding-top: 5px;
@@ -79,12 +89,16 @@
 }
 
 .event__month{
-	font-size: 30px;
+	font-size: 0.4em;
 	margin-left: -9px;
+	@media screen and (max-width: 410px){
+		display: block;
+		margin-left: 4px;
+	}
 }
 
 .event__title{
-	font-size: 13px;
+	font-size: 1.3em;
 	font-family: "Lato Black";
 	text-transform: uppercase;
 	padding: 0;

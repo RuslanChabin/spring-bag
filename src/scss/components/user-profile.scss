@@ -2,7 +2,7 @@
 	position: fixed;
 	background-color: $orange;
 	color: white;
-	top: 300px;
+	top: 310px;
 	left: -58px;
 	display: block;
     width: 150px;
@@ -19,6 +19,10 @@
     transform: rotate(90deg);
     transition: left 1s ease;
     z-index: 10;
+	@media screen and (max-width: 410px){
+		left: -65px;
+		padding-top: 5px;
+	}
 }
 
 .profile-container{
@@ -136,6 +140,9 @@
 
 .users-section__input:checked ~ .users-section__label{
 	left: 85px;
+	@media screen and (max-width: 410px){
+		left: 60px;
+	}
 }
 
 .users-section__input:checked ~ .profile-container{

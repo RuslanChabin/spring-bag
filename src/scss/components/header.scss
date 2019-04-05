@@ -37,6 +37,10 @@
 		left: 5px;
 	}
 	
+	@media screen and (max-width: 720px){
+		display: none;
+	}
+	
 	&::after{
 		content: "VELOCLUB";
 		position: absolute;

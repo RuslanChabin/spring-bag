@@ -9,6 +9,9 @@
 	top: 45%;
 	left: -2%;
 	z-index: 2;
+	@media screen and (max-width: 720px){
+		left: -9%;
+	}
 }
 
 .small-buttons-container{
@@ -16,7 +19,7 @@
 	position: absolute;
 	z-index: 1000;
 	top: 85%;
-	left: 45%;
+	left: 40%;
 }
 
 .slider-button{
@@ -35,6 +38,9 @@
 	top: 45%;
 	right: -2%;
 	z-index: 2;
+	@media screen and (max-width: 720px){
+		right: -9%;
+	}
 }
 
 .photo-slider-list{
