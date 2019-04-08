@@ -36,7 +36,7 @@
     <li class="header-menu__item"><a class="button button--large" href="profile.html">My profile</a></li>
     <li class="header-menu__item">
       <div class="header-search-wrapper">
-<form class="searching-form" action="" method="get">
+<form class="searching-form" action="#" method="get">
   <p class="searching-form__content">
     <label class="hidden" for="search">Searching form</label>
     <input class="searching-form__input" id="search" type="text" name="search" placeholder="Search">
@@ -86,9 +86,9 @@
   <input class="hidden users-section__input" id="usersOnline" type="checkbox" name="users-online">
   <label class="users-section__label" for="usersOnline">Users online</label>
   <div class="profile-container">
-    <h1 class="pofile-title hidden">Users online</h1>
+    <h2 class="pofile-title hidden">Users online</h2>
     <div class="user-profile">
-      <div class="user-profile__avatar"><img class="user-profile__img" src="images/user1.png"></div>
+      <div class="user-profile__avatar"><img class="user-profile__img" src="images/user1.png" alt="#"></div>
       <div class="user-profile__info">
         <p class="user-profile__name">John Smith</p>
         <p class="user-profile__proffesion">UX Designer</p>
@@ -100,7 +100,7 @@
       </div>
     </div>
     <div class="user-profile">
-      <div class="user-profile__avatar"><img class="user-profile__img" src="images/user2.png"></div>
+      <div class="user-profile__avatar"><img class="user-profile__img" src="images/user2.png" alt="#"></div>
       <div class="user-profile__info user-profile__info--green">
         <p class="user-profile__name user-profile__name--white">Sarah Brown</p>
         <p class="user-profile__proffesion user-profile__proffesion--white">Developer</p>
@@ -122,7 +122,7 @@
       <li class="message-menu-list__item">
         <button class="button-message"></button>
       </li>
-      <li class="message-menu-list__item"><img class="user-profile__img" src="images/user2.png"></li>
+      <li class="message-menu-list__item"><img class="user-profile__img" src="images/user2.png" alt="#"></li>
       <li class="message-menu-list__item">
         <button class="camera-button"></button>
       </li>
@@ -133,7 +133,7 @@
       </li>
     </ul>
     <form class="output-message-form">
-      <textarea class="output-message-form__input" rows="3" type="text" name="message"></textarea>
+      <textarea class="output-message-form__input" rows="3" name="message"></textarea>
       <button class="button button--large button--strech">Reply</button>
     </form>
   </div>
@@ -161,6 +161,7 @@
   </ul>
 </footer>
 <section class="modal-window">
+  <h2 class="hidden">Modal window</h2>
   <div class="modal-wrapper">
     <form class="message-form" name="message-form" method="post">
       <ul class="message-form-list">
