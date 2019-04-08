@@ -120,24 +120,28 @@
 <h2 class="title">Constract your own route</h2>
 <div class="route-container">
   <form class="option-form">
-    <h3 class="form-title">Select route distance</h3>
     <div class="form-block">
-      <input class="slider slider--orange" type="range" min="0" max="100" value="40" step="10" name="slider1">
-      <label class="slider-output" for="slider1"></label>
+      <h3 class="form-title">Select route distance</h3>
+      <div class="slider-block">
+        <input class="slider slider--orange" type="range" min="0" max="100" value="40" step="10" name="slider1">
+        <label class="slider-output" for="slider1"></label>
+      </div>
     </div>
-    <h3 class="form-title">Select the number of routes</h3>
     <div class="form-block">
-      <input class="slider slider--green" type="range" min="0" max="100" value="75" step="25" name="slider2">
-      <label class="slider-output--green" for="slider2"></label>
-      <ul class="slider-list">
-        <li class="slider-list__item">0</li>
-        <li class="slider-list__item">25</li>
-        <li class="slider-list__item">50</li>
-        <li class="slider-list__item">75</li>
-        <li class="slider-list__item">100</li>
-      </ul>
+      <h3 class="form-title">Select the number of routes</h3>
+      <div class="slider-block">
+        <input class="slider slider--green" type="range" min="0" max="100" value="75" step="25" name="slider2">
+        <label class="slider-output--green" for="slider2"></label>
+        <ul class="slider-list">
+          <li class="slider-list__item">0</li>
+          <li class="slider-list__item">25</li>
+          <li class="slider-list__item">50</li>
+          <li class="slider-list__item">75</li>
+          <li class="slider-list__item">100</li>
+        </ul>
+      </div>
     </div>
-    <div class="form-block form-block--small">
+    <div class="form-block">
       <ul class="tic-box-list">
         <li class="tic-box-list__item">
           <input class="tic-box hidden" id="ticBox1" type="checkbox">
@@ -166,12 +170,12 @@
         </li>
       </ul>
     </div>
-    <div class="form-block form-block--small">
-      <h3 class="form-title">Hard journey mode</h3>
+    <div class="form-block">
+      <h3 class="form-title form-title--center">Hard journey mode</h3>
       <input class="toggle hidden" id="toggle" type="checkbox">
       <label class="toggle-label" for="toggle"></label>
     </div>
-    <button class="button button--green-border button--large">Make my way</button>
+    <button class="button button--green-border button--large button--center-position">Make my way</button>
   </form>
   <div class="map-container">
     <div id="map"></div>

@@ -1,33 +1,35 @@
 h2.title Constract your own route
 div.route-container
 	form.option-form
-		h3.form-title Select route distance
 		div.form-block
-			input.slider.slider--orange(
-			type="range"
-			min="0"
-			max="100"
-			value="40"
-			step="10"
-			name="slider1")
-			label.slider-output(for="slider1")
-		h3.form-title Select the number of routes
-		div.form-block
-			input.slider.slider--green(
+			h3.form-title Select route distance
+			div.slider-block
+				input.slider.slider--orange(
 				type="range"
 				min="0"
 				max="100"
-				value="75"
-				step="25"
-				name="slider2")
-			label.slider-output--green(for="slider2")
-			ul.slider-list
-				li.slider-list__item 0
-				li.slider-list__item 25
-				li.slider-list__item 50
-				li.slider-list__item 75
-				li.slider-list__item 100
-		div.form-block.form-block--small
+				value="40"
+				step="10"
+				name="slider1")
+				label.slider-output(for="slider1")
+		div.form-block
+			h3.form-title Select the number of routes
+			div.slider-block
+				input.slider.slider--green(
+					type="range"
+					min="0"
+					max="100"
+					value="75"
+					step="25"
+					name="slider2")
+				label.slider-output--green(for="slider2")
+				ul.slider-list
+					li.slider-list__item 0
+					li.slider-list__item 25
+					li.slider-list__item 50
+					li.slider-list__item 75
+					li.slider-list__item 100
+		div.form-block
 			ul.tic-box-list
 				li.tic-box-list__item
 					input.tic-box.hidden#ticBox1(
@@ -54,12 +56,12 @@ div.route-container
 					type="checkbox")
 					label.tic-box-label(for="ticBox5")
 					p.tic-box__title Somthing 5
-		div.form-block.form-block--small
-			h3.form-title Hard journey mode
+		div.form-block
+			h3.form-title.form-title--center Hard journey mode
 			input.toggle.hidden#toggle(
 			type="checkbox")
 			label.toggle-label(for="toggle")
-		button.button.button--green-border.button--large Make my way
+		button.button.button--green-border.button--large.button--center-position Make my way
 	div.map-container
 		div#map
 	script.
