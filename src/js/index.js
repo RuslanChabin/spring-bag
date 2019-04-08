@@ -1,3 +1,14 @@
+//ripple effect
+window.addEventListener('click', function(e) {
+	document.querySelector(".ripple").style.transform = 'scale(1)';
+	document.querySelector(".ripple").style.top = (e.pageY - 25) + 'px';
+	document.querySelector(".ripple").style.left = (e.pageX - 25) + 'px';
+}, false);
+
+setInterval(function() {
+  document.querySelector(".ripple").style.transform = 'scale(0)';
+}, 400);
+
 //modal
 
 var popupBtn = document.querySelector(".button-write");
