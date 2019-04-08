@@ -14,10 +14,11 @@
 }
 
 .modal-wrapper{
-	width: 20%;
+	max-width: 300px;
 	height: auto;
 	margin-top: 150px;
-	margin-left: 40%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .message-form-list{
