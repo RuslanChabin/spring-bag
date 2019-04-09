@@ -5,6 +5,8 @@ html(lang="ru")
 		div.ripple
 		include pug-templates/header
 		main.container.container--flex
+			include pug-templates/users
+			include pug-templates/messaging
 			section.gallery-section
 				h1.section-title Photo inspiration
 				ul.gallery-list
@@ -71,8 +73,6 @@ html(lang="ru")
 				div.button-wrapper
 					button.arrow-button.arrow-button--grey.arrow-button--left-white-arrow.gallery-button
 					button.arrow-button.arrow-button--grey.arrow-button--right-white-arrow.gallery-button
-		include pug-templates/users
-		include pug-templates/messaging
 		include pug-templates/footer
 		include pug-templates/modal
 		

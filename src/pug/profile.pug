@@ -5,6 +5,8 @@ html(lang="ru")
 		div.ripple
 		include pug-templates/header
 		main.container
+			include pug-templates/users
+			include pug-templates/messaging
 			section.section--padding-top
 				h1.section-title Hello dear user!
 				include pug-templates/chart
@@ -12,8 +14,6 @@ html(lang="ru")
 				include pug-templates/stage
 			section
 				include pug-templates/route
-		include pug-templates/users
-		include pug-templates/messaging
 		include pug-templates/footer
 		include pug-templates/modal
 		

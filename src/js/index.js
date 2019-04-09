@@ -1,3 +1,22 @@
+//photo-slider
+var $radios = $('input[type="radio"][name="slide"]')
+$('.slider-arrow--right').click(function() {
+    var $checked = $radios.filter(':checked');
+    var $next = $radios.eq($radios.index($checked) + 1);
+    if(!$next.length){
+        $next = $radios.first();
+    }
+    $next.prop('checked', true);
+});
+$('.slider-arrow--left').click(function() {
+    var $checked = $radios.filter(':checked');
+    var $prev = $radios.eq($radios.index($checked) - 1);
+    if(!$prev.length){
+        $prev = $radios.first();
+    }
+    $prev.prop('checked', true);
+});
+
 //ripple effect
 window.addEventListener('click', function(e) {
 	document.querySelector(".ripple").style.transform = 'scale(1)';
