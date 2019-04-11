@@ -1,5 +1,16 @@
 //photo-slider
 var $radios = $('input[type="radio"][name="slide"]')
+
+
+setInterval(function() {
+	var $checkedPhotoSlider = $radios.filter(':checked');
+	var $nextPhotoSlider = $radios.eq($radios.index($checkedPhotoSlider) + 1);
+	if(!$nextPhotoSlider.length){
+		$nextPhotoSlider = $radios.first();
+	}
+	$nextPhotoSlider.prop('checked', true);
+}, 7000);
+
 $('.slider-arrow--right').click(function() {
     var $checked = $radios.filter(':checked');
     var $next = $radios.eq($radios.index($checked) + 1);
